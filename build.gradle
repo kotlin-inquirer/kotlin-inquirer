@@ -11,6 +11,8 @@ repositories {
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib"
     compile "org.jetbrains.kotlin:kotlin-script-runtime"
+    compile "com.github.holgerbrandl:kscript-annotations:1.2"
+    implementation "org.jline:jline:3.12.1"
 
 }
 
