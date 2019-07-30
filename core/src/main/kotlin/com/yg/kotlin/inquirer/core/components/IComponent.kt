@@ -1,4 +1,4 @@
-package com.yg.kotlin.inquirer.core.component
+package com.yg.kotlin.inquirer.core.components
 
 import com.yg.kotlin.inquirer.core.Event
 

@@ -1,4 +1,4 @@
-package com.yg.kotlin.inquirer.core.component
+package com.yg.kotlin.inquirer.core.components
 
 import com.yg.kotlin.inquirer.core.Event
 
@@ -15,6 +15,12 @@ class ConfirmationComponent(private val question: String,
         when (event) {
             is Event.PressLeft -> confirmed = true
             is Event.PressRight -> confirmed = false
+            is Event.Character -> {
+                when (event.c) {
+                    'y', 'Y' -> confirmed = true
+                    'n', 'N' -> confirmed = false
+                }
+            }
         }
     }
 

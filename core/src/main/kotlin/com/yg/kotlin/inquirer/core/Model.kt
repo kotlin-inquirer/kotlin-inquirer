@@ -1,6 +1,6 @@
 package com.yg.kotlin.inquirer.core
 
-import com.yg.kotlin.inquirer.core.component.IComponent
+import com.yg.kotlin.inquirer.core.components.IComponent
 
 data class State(val inProgress: Boolean, val component: IComponent<*>)
 

@@ -1,7 +1,7 @@
 package com.yg.kotlin.inquirer.core
 
-import com.yg.kotlin.inquirer.core.component.ConfirmationComponent
-import com.yg.kotlin.inquirer.core.component.IComponent
+import com.yg.kotlin.inquirer.core.components.ConfirmationComponent
+import com.yg.kotlin.inquirer.core.components.IComponent
 import org.jline.terminal.Terminal
 import org.jline.terminal.TerminalBuilder
 import org.jline.utils.NonBlockingReader
@@ -25,13 +25,26 @@ fun <T> interact(component: IComponent<T>) {
     runTerminal { reader ->
         println(component.render())
         while (true) {
-            val event = waitForInteraction(reader)
-            if (event !is Event.NotSupportedChar) {
-                component.onEvent(event)
-                println(component.render())
+            when (val event = waitForInteraction(reader)) {
+                is Event.PressEnter -> {
+                    component.value()
+                    return@runTerminal
+                }
+                is Event.NotSupportedChar -> {
+                }
+                else -> {
+                    component.onEvent(event)
+                    renderView(component.render())
+                }
             }
         }
     }
+}
+
+private fun renderView(view: String) {
+    print("\u001b[${view.lines().size}A")
+    print("\u001b[0J")
+    println(view)
 }
 
 private fun waitForInteraction(reader: NonBlockingReader): Event {
