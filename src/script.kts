@@ -5,19 +5,7 @@ import org.jline.terminal.TerminalBuilder
 import org.jline.utils.NonBlockingReader
 
 
-interface IComponent {
-    fun render(): String
-}
-
-class ConfirmationComponent(private val question: String, default: Boolean = false) : IComponent {
-
-    override fun render(): String {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-}
-
-data class State(val inProgress: Boolean, val component: IComponent)
-
+data class State(val inProgress: Boolean, val component: IComponent<*>)
 
 sealed class Event {
     object PressUp : Event()
@@ -27,6 +15,34 @@ sealed class Event {
     object PressEnter : Event()
     object PressSpace : Event()
     data class Character(val c: Char) : Event()
+}
+
+interface IComponent<T> {
+    fun onEvent(event: Event) {}
+    fun render(): String
+    fun value(): T
+
+}
+
+class ConfirmationComponent(private val question: String,
+                            private var default: Boolean = false) : IComponent<Boolean> {
+
+    override fun value(): Boolean {
+        return default
+    }
+
+    override fun onEvent(event: Event) {
+        when (event) {
+            is Event.PressRight -> default = true
+            is Event.PressLeft -> default = false
+            is Event.Character -> "${event.c}"
+            else -> ""
+        }
+    }
+
+    override fun render(): String {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
 }
 
 fun updateState(init: State, eventHandlerFunc: (state: State, event: Event) -> State): State {
