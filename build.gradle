@@ -4,6 +4,9 @@ allprojects {
     }
 }
 
+group = "com.yg.kotlin.inquirer"
+version = "1.0"
+
 subprojects {
     version = '1.0'
 }

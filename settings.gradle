@@ -1,2 +1,3 @@
 rootProject.name = 'kotlin-inquirer'
 include 'core'
+include 'script'

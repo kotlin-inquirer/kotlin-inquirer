@@ -21,19 +21,17 @@ fun runTerminal(func: (reader: NonBlockingReader) -> Unit) {
     terminal.close()
 }
 
-fun interact(component: IComponent<*>) {
+fun <T> interact(component: IComponent<T>) {
     runTerminal { reader ->
         println(component.render())
         while (true) {
             val event = waitForInteraction(reader)
-            if (event != Event.NotSupportedChar) {
+            if (event !is Event.NotSupportedChar) {
                 component.onEvent(event)
                 println(component.render())
             }
         }
     }
-
-
 }
 
 private fun waitForInteraction(reader: NonBlockingReader): Event {
