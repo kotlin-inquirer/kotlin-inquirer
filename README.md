@@ -6,11 +6,11 @@ A common interactive command line user interfaces inspired by Inquirer.js
 #### Todo
 ##### Components
 - [x] Confirm
-- [ ] List
-- [ ] List with multi selection
 - [x] Input
 - [x] Input Numbers
 - [x] Input Password
+- [ ] List
+- [ ] List with multi selection
 
 ##### Operation
 - [ ] Maven Central
