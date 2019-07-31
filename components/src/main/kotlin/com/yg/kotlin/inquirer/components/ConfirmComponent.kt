@@ -3,7 +3,7 @@ package com.yg.kotlin.inquirer.components
 import com.yg.kotlin.inquirer.core.*
 
 class ConfirmComponent(private val message: String,
-                       default: Boolean = false) : IComponent<Boolean> {
+                       default: Boolean = false) : Component<Boolean> {
     private var confirmed = default
     private var interacting = true
 
@@ -30,9 +30,17 @@ class ConfirmComponent(private val message: String,
     }
 
     override fun render(): String {
-        val yesNo = when {
-            confirmed -> "[Yes] No "
-            else -> " Yes [No]"
+        val yesNo = if (interacting) {
+            when {
+                confirmed -> "[Yes] No "
+                else -> " Yes [No]"
+            }
+        } else {
+            if (confirmed) {
+                "Yes"
+            } else {
+                "No"
+            }.style(color = Color.White)
         }
 
         val questionMark = "?".style(color = Color.Yellow, decoration = Decoration.Bold)

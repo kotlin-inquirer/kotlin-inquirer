@@ -26,19 +26,3 @@ compileKotlin {
 compileTestKotlin {
     kotlinOptions.jvmTarget = "1.8"
 }
-
-task myRun(type: JavaExec) {
-    classpath sourceSets.main.runtimeClasspath
-    main = "com.yg.kotlin.inquirer.core.MainKt"
-}
-
-jar {
-    manifest {
-        attributes(
-                'Main-Class': 'com.yg.kotlin.inquirer.core.MainKt'
-        )
-    }
-    from {
-        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
-    }
-}
