@@ -1,10 +1,8 @@
 plugins {
-    id 'java'
     id 'org.jetbrains.kotlin.jvm' version '1.3.41'
     id 'maven'
 }
 
-version 'unspecified'
 description = 'kotlin-Inquirer Core'
 group = "com.yg.kotlin.inquirer"
 version = 1.0

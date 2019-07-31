@@ -1,8 +1,9 @@
-package com.yg.kotlin.inquirer.core.components
+package com.yg.kotlin.inquirer.components
 
 import com.yg.kotlin.inquirer.core.Color
 import com.yg.kotlin.inquirer.core.Decoration
 import com.yg.kotlin.inquirer.core.Event
+import com.yg.kotlin.inquirer.core.IComponent
 import com.yg.kotlin.inquirer.core.style
 
 class ConfirmationComponent(private val question: String,

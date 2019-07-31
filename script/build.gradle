@@ -14,6 +14,7 @@ dependencies {
     compile "com.github.holgerbrandl:kscript-annotations:1.2"
     implementation "org.jline:jline:3.12.1"
     compile project(":core")
+    compile project(":components")
     compile fileTree(dir: 'libs', include: ['*.jar'])
 }
 

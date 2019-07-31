@@ -1,6 +1,5 @@
 package com.yg.kotlin.inquirer.core
 
-import com.yg.kotlin.inquirer.core.components.IComponent
 import org.jline.terminal.Terminal
 import org.jline.terminal.TerminalBuilder
 import org.jline.utils.NonBlockingReader

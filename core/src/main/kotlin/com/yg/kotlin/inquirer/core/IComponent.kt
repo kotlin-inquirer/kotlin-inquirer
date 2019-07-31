@@ -1,6 +1,4 @@
-package com.yg.kotlin.inquirer.core.components
-
-import com.yg.kotlin.inquirer.core.Event
+package com.yg.kotlin.inquirer.core
 
 interface IComponent<T> {
     fun onEvent(event: Event)
