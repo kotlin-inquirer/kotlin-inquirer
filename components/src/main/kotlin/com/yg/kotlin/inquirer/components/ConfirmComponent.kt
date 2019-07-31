@@ -2,8 +2,8 @@ package com.yg.kotlin.inquirer.components
 
 import com.yg.kotlin.inquirer.core.*
 
-class ConfirmComponent(private val message: String,
-                       default: Boolean = false) : Component<Boolean> {
+private class ConfirmComponent(private val message: String,
+                               default: Boolean = false) : Component<Boolean> {
     private var confirmed = default
     private var interacting = true
 
@@ -43,9 +43,13 @@ class ConfirmComponent(private val message: String,
             }.style(color = Color.White)
         }
 
-        val questionMark = "?".style(color = Color.Yellow, decoration = Decoration.Bold)
+        val questionMark = "?".style(color = Color.Green, decoration = Decoration.Bold)
         return "$questionMark " +
                 "${message.style(decoration = Decoration.Bold)} " +
                 yesNo.style(color = Color.Cyan, decoration = Decoration.Bold)
     }
+}
+
+fun KInquirer.promptConfirm(message: String): Boolean {
+    return prompt(ConfirmComponent(message))
 }

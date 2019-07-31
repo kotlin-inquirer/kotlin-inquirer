@@ -9,6 +9,7 @@ sealed class Event {
     object PressLeft : Event()
     object PressEnter : Event()
     object PressSpace : Event()
+    object PressBackspace : Event()
     object NotSupportedChar : Event()
     data class Character(val c: Char) : Event()
 }

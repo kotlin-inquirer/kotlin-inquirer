@@ -8,9 +8,9 @@ A common interactive command line user interfaces inspired by Inquirer.js
 - [x] Confirm
 - [ ] List
 - [ ] List with multi selection
-- [ ] Input
-- [ ] Input Numbers
-- [ ] Input Password
+- [x] Input
+- [x] Input Numbers
+- [x] Input Password
 
 ##### Operation
 - [ ] Maven Central

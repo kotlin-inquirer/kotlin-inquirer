@@ -37,6 +37,7 @@ object KInquirer {
 
     private fun waitForInteraction(reader: NonBlockingReader): Event {
         return when (val c = reader.read()) {
+            127 -> Event.PressBackspace
             13 -> Event.PressEnter
             32 -> Event.PressSpace
             27 -> readEscValues(reader)

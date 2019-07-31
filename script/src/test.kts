@@ -1,13 +1,15 @@
 @file:DependsOn("com.yg.kotlin.inquirer:core:1.0")
 @file:DependsOn("com.yg.kotlin.inquirer:components:1.0")
 
-import com.yg.kotlin.inquirer.components.ConfirmComponent
+import com.yg.kotlin.inquirer.components.promptInput
+import com.yg.kotlin.inquirer.components.promptInputNumber
+import com.yg.kotlin.inquirer.components.promptInputPassword
 import com.yg.kotlin.inquirer.core.KInquirer
 
-fun KInquirer.promptConfirm(message: String): Boolean {
-    return prompt(ConfirmComponent(message))
-}
+val name = KInquirer.promptInput("Enter Your Name:", "")
+val age = KInquirer.promptInputNumber("Enter Your Age:")
+val password = KInquirer.promptInputPassword("Enter Your Password:")
 
-val result: Boolean = KInquirer.promptConfirm("Hello")
-
-println(result)
+println("Hello $name !")
+println("Age $age")
+println("Password $password")
