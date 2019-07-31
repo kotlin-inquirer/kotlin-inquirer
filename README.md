@@ -15,6 +15,7 @@ A common interactive command line user interfaces inspired by Inquirer.js
 - [x] Input Password
 - [ ] List
 - [ ] List with multi selection
+- [ ] Support Hint
 
 ##### Operation
 - [ ] Maven Central
