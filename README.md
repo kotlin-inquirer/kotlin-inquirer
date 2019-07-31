@@ -4,7 +4,7 @@ A common interactive command line user interfaces inspired by Inquirer.js
 
 
 ## Components
-# Input
+### Input
 <p align="center"><img src="/assets/input-component.gif?raw=true"/></p>
 
 #### Todo
