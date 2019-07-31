@@ -3,4 +3,6 @@
 import com.yg.kotlin.inquirer.core.components.ConfirmationComponent
 import com.yg.kotlin.inquirer.core.interact
 
-interact(ConfirmationComponent("Are You OK ?"))
+val component = ConfirmationComponent("Are You OK ?")
+interact(component)
+println(component.value())

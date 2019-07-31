@@ -1,14 +1,9 @@
 package com.yg.kotlin.inquirer.core
 
-import com.yg.kotlin.inquirer.core.components.ConfirmationComponent
 import com.yg.kotlin.inquirer.core.components.IComponent
 import org.jline.terminal.Terminal
 import org.jline.terminal.TerminalBuilder
 import org.jline.utils.NonBlockingReader
-
-fun main() {
-    interact(ConfirmationComponent("Are You OK ?"))
-}
 
 fun runTerminal(func: (reader: NonBlockingReader) -> Unit) {
     val terminal: Terminal = TerminalBuilder.builder().jna(true).system(true).build()
@@ -47,7 +42,7 @@ private fun waitForInteraction(reader: NonBlockingReader): Event {
     }
 }
 
-fun readEscValues(reader: NonBlockingReader): Event {
+private fun readEscValues(reader: NonBlockingReader): Event {
     if (reader.read() == '['.toInt()) {
         return when (reader.read()) {
             65 -> Event.PressUp     //"↑"
