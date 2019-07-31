@@ -5,17 +5,6 @@ import org.jline.terminal.Terminal
 import org.jline.terminal.TerminalBuilder
 import org.jline.utils.NonBlockingReader
 
-fun runTerminal(func: (reader: NonBlockingReader) -> Unit) {
-    val terminal: Terminal = TerminalBuilder.builder().jna(true).system(true).build()
-    terminal.enterRawMode()
-    val reader: NonBlockingReader = terminal.reader()
-
-    func(reader)
-
-    reader.close()
-    terminal.close()
-}
-
 fun <T> interact(component: IComponent<T>) {
     runTerminal { reader ->
         println(component.render())
@@ -25,6 +14,17 @@ fun <T> interact(component: IComponent<T>) {
             renderView(component.render())
         }
     }
+}
+
+fun runTerminal(func: (reader: NonBlockingReader) -> Unit) {
+    val terminal: Terminal = TerminalBuilder.builder().jna(true).system(true).build()
+    terminal.enterRawMode()
+    val reader: NonBlockingReader = terminal.reader()
+
+    func(reader)
+
+    reader.close()
+    terminal.close()
 }
 
 private fun renderView(view: String) {
