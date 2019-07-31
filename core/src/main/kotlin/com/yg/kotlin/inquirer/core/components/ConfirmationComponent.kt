@@ -4,17 +4,22 @@ import com.yg.kotlin.inquirer.core.Event
 
 class ConfirmationComponent(private val question: String,
                             default: Boolean = false) : IComponent<Boolean> {
-
     private var confirmed = default
+    private var interacting = true
 
     override fun value(): Boolean {
         return confirmed
+    }
+
+    override fun interacting(): Boolean {
+        return interacting
     }
 
     override fun onEvent(event: Event) {
         when (event) {
             is Event.PressLeft -> confirmed = true
             is Event.PressRight -> confirmed = false
+            is Event.PressEnter -> interacting = false
             is Event.Character -> {
                 when (event.c) {
                     'y', 'Y' -> confirmed = true

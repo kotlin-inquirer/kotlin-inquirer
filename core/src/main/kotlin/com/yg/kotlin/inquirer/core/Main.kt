@@ -24,19 +24,10 @@ fun runTerminal(func: (reader: NonBlockingReader) -> Unit) {
 fun <T> interact(component: IComponent<T>) {
     runTerminal { reader ->
         println(component.render())
-        while (true) {
-            when (val event = waitForInteraction(reader)) {
-                is Event.PressEnter -> {
-                    component.value()
-                    return@runTerminal
-                }
-                is Event.NotSupportedChar -> {
-                }
-                else -> {
-                    component.onEvent(event)
-                    renderView(component.render())
-                }
-            }
+        while (component.interacting()) {
+            val event = waitForInteraction(reader)
+            component.onEvent(event)
+            renderView(component.render())
         }
     }
 }
