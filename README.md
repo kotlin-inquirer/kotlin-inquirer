@@ -5,7 +5,7 @@ A common interactive command line user interfaces inspired by Inquirer.js
 
 #### Todo
 ##### Components
-- [x] Confirmation
+- [x] Confirm
 - [ ] List
 - [ ] List with multi selection
 - [ ] Input
