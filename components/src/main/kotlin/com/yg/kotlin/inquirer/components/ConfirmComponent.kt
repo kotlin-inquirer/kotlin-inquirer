@@ -1,13 +1,9 @@
 package com.yg.kotlin.inquirer.components
 
-import com.yg.kotlin.inquirer.core.Color
-import com.yg.kotlin.inquirer.core.Decoration
-import com.yg.kotlin.inquirer.core.Event
-import com.yg.kotlin.inquirer.core.IComponent
-import com.yg.kotlin.inquirer.core.style
+import com.yg.kotlin.inquirer.core.*
 
-class ConfirmationComponent(private val question: String,
-                            default: Boolean = false) : IComponent<Boolean> {
+class ConfirmComponent(private val message: String,
+                       default: Boolean = false) : IComponent<Boolean> {
     private var confirmed = default
     private var interacting = true
 
@@ -41,7 +37,7 @@ class ConfirmationComponent(private val question: String,
 
         val questionMark = "?".style(color = Color.Yellow, decoration = Decoration.Bold)
         return "$questionMark " +
-                "${question.style(decoration = Decoration.Bold)} " +
+                "${message.style(decoration = Decoration.Bold)} " +
                 yesNo.style(color = Color.Cyan, decoration = Decoration.Bold)
     }
 }
