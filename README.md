@@ -12,4 +12,12 @@ A common interactive command line user interfaces inspired by Inquirer.js
 - [ ] Input Numbers
 - [ ] Input Password
 
+##### Operation
+- [ ] Maven Central
+- [ ] Gifs
+- [ ] Travis-CI ?
+- [ ] codecov 
+- [ ] Icon
+- [ ] Examples
+
 
