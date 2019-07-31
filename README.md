@@ -3,6 +3,11 @@
 A common interactive command line user interfaces inspired by Inquirer.js
 
 
+## Components
+# Input
+<p align="center"><img src="/assets/input-component.gif?raw=true"/></p>
+![](assets/input-component.gif)
+
 #### Todo
 ##### Components
 - [x] Confirm
