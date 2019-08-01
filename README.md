@@ -13,6 +13,7 @@ A common interactive command line user interfaces inspired by Inquirer.js
 - [x] Input
 - [x] Input Numbers
 - [x] Input Password
+- [ ] Input validation error message
 - [ ] List
 - [ ] List with multi selection
 - [ ] Support Hint
