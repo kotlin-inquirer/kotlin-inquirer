@@ -5,6 +5,7 @@ import java.math.BigDecimal
 
 private class InputComponent(val message: String,
                              default: String,
+                             val hint: String = "",
                              val validation: (s: String) -> Boolean,
                              val filter: (s: String) -> Boolean,
                              val transform: (s: String) -> String) : Component<String> {
@@ -43,8 +44,9 @@ private class InputComponent(val message: String,
         val prefix = "?".style(color = Color.Green, decoration = Decoration.Bold)
         val boldMessage = message.style(decoration = Decoration.Bold)
         val transformedValue = transform(value)
+        val hintView = if (value.isNotBlank() || hint.isBlank()) "" else hint.style(color = Color.Black)
 
-        return "$prefix $boldMessage $transformedValue$courser"
+        return "$prefix $boldMessage $transformedValue$courser $hintView"
     }
 
 
@@ -53,31 +55,34 @@ private class InputComponent(val message: String,
 fun KInquirer.promptInput(
         message: String,
         default: String = "",
+        hint: String = "",
         validation: (s: String) -> Boolean = { true },
         filter: (s: String) -> Boolean = { true },
         transform: (s: String) -> String = { it }): String {
 
-    return KInquirer.prompt(InputComponent(message, default, validation, filter, transform))
+    return KInquirer.prompt(InputComponent(message, default, hint, validation, filter, transform))
 }
 
 fun KInquirer.promptInputPassword(
         message: String,
         default: String = "",
+        hint: String = "",
         mask: String = "*"): String {
 
     val validation: (s: String) -> Boolean = { true }
     val filter: (s: String) -> Boolean = { true }
     val transform: (s: String) -> String = { it.map { mask }.joinToString("") }
 
-    return KInquirer.prompt(InputComponent(message, default, validation, filter, transform))
+    return KInquirer.prompt(InputComponent(message, default, hint, validation, filter, transform))
 }
 
 fun KInquirer.promptInputNumber(
         message: String,
         default: String = "",
+        hint: String = "",
         validation: (s: String) -> Boolean = { it.matches("\\d+.?\\d*".toRegex()) },
         filter: (s: String) -> Boolean = { it.matches("\\d*\\.?\\d*".toRegex()) },
         transform: (s: String) -> String = { it }): BigDecimal {
 
-    return BigDecimal(KInquirer.prompt(InputComponent(message, default, validation, filter, transform)))
+    return BigDecimal(KInquirer.prompt(InputComponent(message, default, hint, validation, filter, transform)))
 }
