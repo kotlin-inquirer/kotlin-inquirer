@@ -39,16 +39,18 @@ private class InputComponent(val message: String,
         }
     }
 
-    override fun render(): String {
-        val courser = if (interacting) "_".style(decoration = Decoration.Bold) else ""
+    override fun render(previousView: String): String {
         val prefix = "?".style(color = Color.Green, decoration = Decoration.Bold)
         val boldMessage = message.style(decoration = Decoration.Bold)
-        val transformedValue = transform(value)
-        val hintView = if (value.isNotBlank() || hint.isBlank()) "" else hint.style(color = Color.Black)
+        val hintView = if (value.isNotBlank() || hint.isBlank()) "" else "  " + hint.style(color = Color.Black).moveCursor(CursorDirection.Left, hint.length + 2)
+        val transformedValue = transform(value) + hintView
 
-        return "$prefix $boldMessage $transformedValue$courser $hintView"
+        if (!interacting) {
+            return "$prefix $boldMessage $transformedValue\n"
+        }
+
+        return "$prefix $boldMessage $transformedValue"
     }
-
 
 }
 
@@ -60,7 +62,7 @@ fun KInquirer.promptInput(
         filter: (s: String) -> Boolean = { true },
         transform: (s: String) -> String = { it }): String {
 
-    return KInquirer.prompt(InputComponent(message, default, hint, validation, filter, transform))
+    return prompt(InputComponent(message, default, hint, validation, filter, transform))
 }
 
 fun KInquirer.promptInputPassword(
@@ -73,7 +75,7 @@ fun KInquirer.promptInputPassword(
     val filter: (s: String) -> Boolean = { true }
     val transform: (s: String) -> String = { it.map { mask }.joinToString("") }
 
-    return KInquirer.prompt(InputComponent(message, default, hint, validation, filter, transform))
+    return prompt(InputComponent(message, default, hint, validation, filter, transform))
 }
 
 fun KInquirer.promptInputNumber(
@@ -84,5 +86,5 @@ fun KInquirer.promptInputNumber(
         filter: (s: String) -> Boolean = { it.matches("\\d*\\.?\\d*".toRegex()) },
         transform: (s: String) -> String = { it }): BigDecimal {
 
-    return BigDecimal(KInquirer.prompt(InputComponent(message, default, hint, validation, filter, transform)))
+    return BigDecimal(prompt(InputComponent(message, default, hint, validation, filter, transform)))
 }

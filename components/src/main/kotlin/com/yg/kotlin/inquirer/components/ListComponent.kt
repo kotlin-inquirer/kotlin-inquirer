@@ -31,7 +31,7 @@ private class ListComponent(val message: String,
         }
     }
 
-    override fun render(): String {
+    override fun render(previousView: String): String {
         val menuChoices = choices.mapIndexed { index, s ->
             val d = if (courserIndex == index) {
                 " > $s".style(color = Color.Blue, decoration = Decoration.Bold)

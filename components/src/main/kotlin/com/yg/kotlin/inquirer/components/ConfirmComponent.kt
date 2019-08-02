@@ -29,7 +29,7 @@ private class ConfirmComponent(private val message: String,
         }
     }
 
-    override fun render(): String {
+    override fun render(previousView: String): String {
         val yesNo = if (interacting) {
             when {
                 confirmed -> "[Yes] No "

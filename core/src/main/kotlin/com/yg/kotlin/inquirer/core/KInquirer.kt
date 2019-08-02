@@ -7,7 +7,7 @@ import org.jline.utils.NonBlockingReader
 object KInquirer {
 
     fun <T> prompt(component: Component<T>): T {
-        println(component.render())
+        renderView(component.render())
         runTerminal { reader ->
             while (component.interacting()) {
                 val event = waitForInteraction(reader)
@@ -30,9 +30,11 @@ object KInquirer {
     }
 
     private fun renderView(view: String) {
-        print("\u001b[${view.lines().size}A")
-        print("\u001b[0J")
-        println(view)
+//        print("\u001b[${view.lines().size}A")
+        print("\u001b[1K")
+        print("\u001b[0K")
+        print("\u001b[40D")
+        print(view)
     }
 
     private fun waitForInteraction(reader: NonBlockingReader): Event {
@@ -40,6 +42,7 @@ object KInquirer {
             127 -> Event.PressBackspace
             13 -> Event.PressEnter
             32 -> Event.PressSpace
+            12 -> Event.PressClearScreen
             27 -> readEscValues(reader)
             else -> Event.Character(c.toChar())
         }
