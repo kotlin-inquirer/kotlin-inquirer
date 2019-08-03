@@ -13,9 +13,9 @@ A common interactive command line user interfaces inspired by Inquirer.js
 - [x] Input
 - [x] Input Numbers
 - [x] Input Password
+- [x] List
+- [x] List with multi selection
 - [ ] Input validation error message
-- [ ] List
-- [ ] List with multi selection
 - [ ] Support Hint
 
 ##### Operation

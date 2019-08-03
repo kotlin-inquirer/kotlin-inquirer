@@ -1,7 +1,12 @@
 @file:DependsOn("com.yg.kotlin.inquirer:core:1.0")
 @file:DependsOn("com.yg.kotlin.inquirer:components:1.0")
 
-import com.yg.kotlin.inquirer.components.*
+import com.yg.kotlin.inquirer.components.promptConfirm
+import com.yg.kotlin.inquirer.components.promptInput
+import com.yg.kotlin.inquirer.components.promptInputNumber
+import com.yg.kotlin.inquirer.components.promptInputPassword
+import com.yg.kotlin.inquirer.components.promptList
+import com.yg.kotlin.inquirer.components.promptListMulti
 import com.yg.kotlin.inquirer.core.KInquirer
 
 val componentName = KInquirer.promptList("What component do you want to test?", listOf(
