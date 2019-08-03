@@ -46,28 +46,25 @@ private class ListComponent(val message: String,
     }
 
     override fun render(): String {
-        val checkedIcon = "◉ ".style(color = Color.Green)
-        val uncheckedIcon = "◯ "
-        val pointerIcon = ">".style(color = selectionColor, decoration = Decoration.Bold)
-
         val menuChoices = choices.mapIndexed { index, choice ->
-            val isHover = courserIndex == index
             val isChecked = selectedIndexes.contains(index)
-
-            val mm = when {
-                isHover && isChecked -> " $pointerIcon $checkedIcon ${choice.style(color = selectionColor, decoration = Decoration.Bold)}"
-                isHover -> " $pointerIcon $uncheckedIcon ${choice.style(color = selectionColor, decoration = Decoration.Bold)}"
-                isChecked -> "   $checkedIcon $choice"
-                else -> "   $uncheckedIcon $choice"
+            val isHover = courserIndex == index
+            val checkIcon = if (multiSelection) {
+                if (isChecked) " ◉ ".style(color = Color.Green) else " ◯ "
+            } else {
+                ""
             }
-            mm
+            val pointerIcon = if (isHover) " ❯" else "  "
+            val boldChoice = if (isHover) choice.style(color = selectionColor, decoration = Decoration.Bold) else choice
+            "$pointerIcon$checkIcon $boldChoice"
         }
-        val questionMark = "?".style(color = Color.Green, decoration = Decoration.Bold)
 
+
+        val questionMark = "?".style(color = Color.Green, decoration = Decoration.Bold)
         val boldMessage = message.style(decoration = Decoration.Bold)
 
         return if (interacting) {
-            "$questionMark $boldMessage\n" + menuChoices.joinToString("\n").moveCursorStartOfLine()
+            "$questionMark $boldMessage  ${hint.style(color = Color.Black)}\n" + menuChoices.joinToString("\n").moveCursorStartOfLine()
                     .moveCursor(CursorDirection.Up, menuChoices.size)
                     .moveCursor(CursorDirection.Right, message.length + 3)
         } else {

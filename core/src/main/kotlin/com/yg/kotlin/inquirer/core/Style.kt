@@ -62,6 +62,8 @@ fun String.moveCursorLeft(steps: Int = 1): String = "$this$ESC[$steps" + "D"
 
 fun String.moveCursorStartOfLine(): String = "$this\r"
 
+fun String.clearScreen(): String = "\r\u001B[0J$this"
+
 
 fun main() {
 //    println("Hello")

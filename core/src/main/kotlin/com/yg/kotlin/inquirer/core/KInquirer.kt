@@ -19,7 +19,10 @@ object KInquirer {
     }
 
     private fun runTerminal(func: (reader: NonBlockingReader) -> Unit) {
-        val terminal: Terminal = TerminalBuilder.builder().jna(true).system(true).build()
+        val terminal: Terminal = TerminalBuilder.builder()
+                .jna(true)
+                .system(true)
+                .build()
         terminal.enterRawMode()
         val reader: NonBlockingReader = terminal.reader()
 
@@ -30,10 +33,9 @@ object KInquirer {
     }
 
     private fun renderView(view: String) {
-//        print("\u001b[${view.lines().size}A")
-        print("\u001b[1K")
-        print("\u001b[0K")
-        print("\u001b[40D")
+        print("\u001b[1K\u001B[0K\r")
+//        print("\u001b[0K")
+//        print("\r")
         print(view)
     }
 
