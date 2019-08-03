@@ -52,6 +52,16 @@ fun String.moveCursor(direction: CursorDirection, steps: Int = 1): String {
     return this + direction.steps(steps)
 }
 
+fun String.moveCursorUp(steps: Int = 1): String = "$this$ESC[$steps" + "A"
+
+fun String.moveCursorDown(steps: Int = 1): String = "$this$ESC[$steps" + "B"
+
+fun String.moveCursorRight(steps: Int = 1): String = "$this$ESC[$steps" + "C"
+
+fun String.moveCursorLeft(steps: Int = 1): String = "$this$ESC[$steps" + "D"
+
+fun String.moveCursorStartOfLine(): String = "$this\r"
+
 
 fun main() {
 //    println("Hello")
