@@ -29,7 +29,7 @@ private class ConfirmComponent(private val message: String,
         }
     }
 
-    override fun render(previousView: String): String {
+    override fun render(): String {
         val yesNo = if (interacting) {
             when {
                 confirmed -> "[Yes] No "
@@ -40,10 +40,11 @@ private class ConfirmComponent(private val message: String,
                 "Yes"
             } else {
                 "No"
-            }.style(color = Color.White)
+            }.style(color = Color.White) + "\n"
         }
 
         val questionMark = "?".style(color = Color.Green, decoration = Decoration.Bold)
+
         return "$questionMark " +
                 "${message.style(decoration = Decoration.Bold)} " +
                 yesNo.style(color = Color.Cyan, decoration = Decoration.Bold)

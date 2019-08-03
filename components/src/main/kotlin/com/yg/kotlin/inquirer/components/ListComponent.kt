@@ -21,17 +21,17 @@ private class ListComponent(val message: String,
             is Event.PressUp -> courserIndex = max(courserIndex - 1, 0)
             is Event.PressDown -> courserIndex = min(courserIndex + 1, choices.size - 1)
             is Event.PressSpace -> {
-                if (selectedIndexes.contains(courserIndex)) {
-                    selectedIndexes = selectedIndexes.filter { it != courserIndex }.toSet()
+                selectedIndexes = if (selectedIndexes.contains(courserIndex)) {
+                    selectedIndexes.filter { it != courserIndex }.toSet()
                 } else {
-                    selectedIndexes = selectedIndexes + courserIndex
+                    selectedIndexes + courserIndex
                 }
             }
             is Event.PressEnter -> interacting = false
         }
     }
 
-    override fun render(previousView: String): String {
+    override fun render(): String {
         val menuChoices = choices.mapIndexed { index, s ->
             val d = if (courserIndex == index) {
                 " > $s".style(color = Color.Blue, decoration = Decoration.Bold)

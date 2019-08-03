@@ -39,7 +39,7 @@ private class InputComponent(val message: String,
         }
     }
 
-    override fun render(previousView: String): String {
+    override fun render(): String {
         val prefix = "?".style(color = Color.Green, decoration = Decoration.Bold)
         val boldMessage = message.style(decoration = Decoration.Bold)
         val hintView = if (value.isNotBlank() || hint.isBlank()) "" else "  " + hint.style(color = Color.Black).moveCursor(CursorDirection.Left, hint.length + 2)
