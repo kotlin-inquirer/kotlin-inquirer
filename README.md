@@ -1,4 +1,4 @@
-# kotlin-Inquirer
+# Kotlin-Inquirer
 
  A common interactive command line user interfaces in written in Kotlin inspired by [Inquirer.js](https://github.com/SBoudrias/Inquirer.js "Inquirer.js github repo")
 
