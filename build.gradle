@@ -5,8 +5,8 @@ allprojects {
 }
 
 group = "com.yg.kotlin.inquirer"
-version = "1.0"
+version = 0.01
 
 subprojects {
-    version = '1.0'
+    version = 0.01
 }

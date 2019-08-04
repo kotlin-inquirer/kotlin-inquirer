@@ -1,5 +1,5 @@
-@file:DependsOn("com.yg.kotlin.inquirer:core:1.0")
-@file:DependsOn("com.yg.kotlin.inquirer:components:1.0")
+@file:DependsOn("com.yg.kotlin.inquirer:core:0.01")
+@file:DependsOn("com.yg.kotlin.inquirer:components:0.01")
 
 import com.yg.kotlin.inquirer.components.promptConfirm
 import com.yg.kotlin.inquirer.components.promptInput

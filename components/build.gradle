@@ -5,7 +5,7 @@ plugins {
 
 description = 'kotlin-Inquirer Components'
 group = "com.yg.kotlin.inquirer"
-version = 1.0
+version = 0.01
 
 repositories {
     mavenLocal()
