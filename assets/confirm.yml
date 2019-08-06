@@ -6,44 +6,44 @@ config:
   # the default is bash for Linux
   # or powershell.exe for Windows
   command: bash -l
-
+  
   # Specify the current working directory path
   # the default is the current working directory path
   cwd: /Users/yanivgrama/dev/kotlin-inquirer
-
+  
   # Export additional ENV variables
   env:
     recording: true
-
+  
   # Explicitly set the number of columns
   # or use `auto` to take the current
   # number of columns of your shell
-  cols: 50
-
+  cols: 60
+  
   # Explicitly set the number of rows
   # or use `auto` to take the current
   # number of rows of your shell
-  rows: 7
-
+  rows: 5
+  
   # Amount of times to repeat GIF
   # If value is -1, play once
   # If value is 0, loop indefinitely
   # If value is a positive number, loop n times
   repeat: 0
-
+  
   # Quality
   # 1 - 100
   quality: 100
-
+  
   # Delay between frames in ms
   # If the value is `auto` use the actual recording delays
   frameDelay: auto
-
+  
   # Maximum delay between frames in ms
   # Ignored if the `frameDelay` isn't set to `auto`
   # Set to `auto` to prevent limiting the max idle time
   maxIdleTime: 2000
-
+  
   # The surrounding frame box
   # The `type` can be null, window, floating, or solid`
   # To hide the title use the value null
@@ -55,7 +55,7 @@ config:
       border: 0px black solid
       boxShadow: none
       margin: 0px
-
+  
   # Add a watermark image to the rendered gif
   # You need to specify an absolute path for
   # the image on your machine or a URL, and you can also
@@ -68,25 +68,25 @@ config:
       bottom: 15px
       width: 100px
       opacity: 0.9
-
+  
   # Cursor style can be one of
   # `block`, `underline`, or `bar`
   cursorStyle: block
-
+  
   # Font family
   # You can use any font that is installed on your machine
   # in CSS-like syntax
   fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
-
+  
   # The size of the font
-  fontSize: 22
-
+  fontSize: 30
+  
   # The height of lines
   lineHeight: 1
-
+  
   # The spacing between letters
   letterSpacing: 0
-
+  
   # Theme
   theme:
     background: "transparent"
@@ -108,24 +108,22 @@ config:
     brightMagenta: "#ae89fe"
     brightCyan: "#b1c6ca"
     brightWhite: "#f9f9f4"
-
+  
 # Records, feel free to edit them
 records:
-  - delay: 0
-    content: "\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mEnter Your Name:\e[1m\e[0m \e[1m_\e[1m\e[0m\r\n"
-  - delay: 2844
-    content: "\e[1A\e[0J\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mEnter Your Name:\e[1m\e[0m Y\e[1m_\e[1m\e[0m\r\n"
-  - delay: 116
-    content: "\e[1A\e[0J\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mEnter Your Name:\e[1m\e[0m Ya\e[1m_\e[1m\e[0m\r\n"
-  - delay: 192
-    content: "\e[1A\e[0J\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mEnter Your Name:\e[1m\e[0m Yan\e[1m_\e[1m\e[0m\r\n"
-  - delay: 72
-    content: "\e[1A\e[0J\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mEnter Your Name:\e[1m\e[0m Yani\e[1m_\e[1m\e[0m\r\n"
-  - delay: 169
-    content: "\e[1A\e[0J\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mEnter Your Name:\e[1m\e[0m Yaniv\e[1m_\e[1m\e[0m\r\n"
-  - delay: 822
-    content: "\e[1A\e[0J\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mEnter Your Name:\e[1m\e[0m Yaniv\r\n"
-  - delay: 100
-    content: "Name: Yaniv\r\n"
-  - delay: 2000
-    content: "\r"
+  - delay: 2999
+    content: "\e[1K\e[0K\r\r\e[0J\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mIs this for delivery?\e[1m\e[0m  Yes [No]"
+  - delay: 1304
+    content: "\e[1K\e[0K\r\r\e[0J\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mIs this for delivery?\e[1m\e[0m [Yes] No "
+  - delay: 855
+    content: "\e[1K\e[0K\r\r\e[0J\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mIs this for delivery?\e[1m\e[0m  Yes [No]"
+  - delay: 1033
+    content: "\e[1K\e[0K\r\r\e[0J\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mIs this for delivery?\e[1m\e[0m [Yes] No "
+  - delay: 308
+    content: "\e[1K\e[0K\r\r\e[0J\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mIs this for delivery?\e[1m\e[0m  Yes [No]"
+  - delay: 532
+    content: "\e[1K\e[0K\r\r\e[0J\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mIs this for delivery?\e[1m\e[0m [Yes] No "
+  - delay: 1329
+    content: "\e[1K\e[0K\r\r\e[0J\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mIs this for delivery?\e[1m\e[0m \e[1m\e[36mYes\r\n\e[36m\e[1m\e[0m"
+  - delay: 12
+    content: "Is Delivery: true\r\n"

@@ -6,34 +6,53 @@
 
 ## Usages
 
+#### Confirm
+Free text user input
+```kotlin
+val isDelivery: Boolean = KInquirer.promptConfirm("Is this for delivery?", default = false)
+```
+<p align="center"><img src="/assets/confirm-component.gif?raw=true"/></p>
+---
+
 #### Input
 Free text user input
 ```kotlin
-val fullName: String = KInquirer.promptInput("Enter Your Name:", hint = "(Full Name)")
+/val comments: String = KInquirer.promptInput("Any comments on your purchase experience?")
 ```
 <p align="center"><img src="/assets/input-component.gif?raw=true"/></p>
+---
 
 #### Input Numbers
 User input accepts only numbers
 ```kotlin
-val age: Int = KInquirer.promptInputNumber("Enter Your Age:", hint = "(only numbers)")
+val quantity: BigDecimal = KInquirer.promptInputNumber("How many do you need?")
 ```
 <p align="center"><img src="/assets/input-component.gif?raw=true"/></p>
+---
 
 #### Input Password
 Password input with hidden value
 ```kotlin
-val password: String = KInquirer.promptInputPassword("Enter Your Password:", hint = "(password)")
+val password: String = KInquirer.promptInputPassword("Enter Your Password:", hint = "password")
 ```
 <p align="center"><img src="/assets/input-component.gif?raw=true"/></p>
+---
 
 #### List
 List
 ```kotlin
-val password: String = KInquirer.promptList("Select Stuff:", listOf("A", "B", "C"))
+val size: String = KInquirer.promptList("What size do you need?", listOf("Large", "Medium", "Small"))
 ```
 <p align="center"><img src="/assets/input-component.gif?raw=true"/></p>
+---
 
+#### List Multi Selection
+List with multiple selection
+```kotlin
+val size: String = KInquirer.promptList("What size do you need?", listOf("Large", "Medium", "Small"))
+```
+<p align="center"><img src="/assets/input-component.gif?raw=true"/></p>
+---
 
 #### Todo
 ##### Components
