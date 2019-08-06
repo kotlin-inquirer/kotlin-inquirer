@@ -12,6 +12,7 @@ Free text user input
 val isDelivery: Boolean = KInquirer.promptConfirm("Is this for delivery?", default = false)
 ```
 <p align="center"><img src="/assets/confirm-component.gif?raw=true"/></p>
+
 ------
 
 #### Input
@@ -20,6 +21,7 @@ Free text user input
 val comments: String = KInquirer.promptInput("Any comments on your purchase experience?")
 ```
 <p align="center"><img src="/assets/input-component.gif?raw=true"/></p>
+
 ------
 
 #### Input Numbers
@@ -36,6 +38,7 @@ Password input with hidden value
 val password: String = KInquirer.promptInputPassword("Enter Your Password:", hint = "password")
 ```
 <p align="center"><img src="/assets/input-component.gif?raw=true"/></p>
+
 ------
 
 #### List
@@ -44,6 +47,7 @@ List
 val size: String = KInquirer.promptList("What size do you need?", listOf("Large", "Medium", "Small"))
 ```
 <p align="center"><img src="/assets/input-component.gif?raw=true"/></p>
+
 ------
 
 #### List Multi Selection
@@ -52,6 +56,7 @@ List with multiple selection
 val size: String = KInquirer.promptList("What size do you need?", listOf("Large", "Medium", "Small"))
 ```
 <p align="center"><img src="/assets/input-component.gif?raw=true"/></p>
+
 ------
 
 #### Todo
