@@ -30,6 +30,7 @@ User input accepts only numbers
 val quantity: BigDecimal = KInquirer.promptInputNumber("How many do you need?")
 ```
 <p align="center"><img src="/assets/input-component.gif?raw=true"/></p>
+
 ------
 
 #### Input Password
