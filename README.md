@@ -47,7 +47,7 @@ List
 ```kotlin
 val size: String = KInquirer.promptList("What size do you need?", listOf("Large", "Medium", "Small"))
 ```
-<p align="center"><img src="/assets/input-component.gif?raw=true"/></p>
+<p align="center"><img src="/assets/list-component.gif?raw=true"/></p>
 
 ------
 
