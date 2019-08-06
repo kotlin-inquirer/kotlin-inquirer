@@ -1,6 +1,13 @@
 package com.yg.kotlin.inquirer.components
 
-import com.yg.kotlin.inquirer.core.*
+import com.yg.kotlin.inquirer.core.Color
+import com.yg.kotlin.inquirer.core.Component
+import com.yg.kotlin.inquirer.core.CursorDirection
+import com.yg.kotlin.inquirer.core.Decoration
+import com.yg.kotlin.inquirer.core.Event
+import com.yg.kotlin.inquirer.core.KInquirer
+import com.yg.kotlin.inquirer.core.moveCursor
+import com.yg.kotlin.inquirer.core.style
 import java.math.BigDecimal
 
 private class InputComponent(val message: String,
@@ -46,7 +53,7 @@ private class InputComponent(val message: String,
         val transformedValue = transform(value) + hintView
 
         if (!interacting) {
-            return "$prefix $boldMessage $transformedValue\n"
+            return "$prefix $boldMessage ${transformedValue.style(color = Color.Cyan, decoration = Decoration.Bold)}\n"
         }
 
         return "$prefix $boldMessage $transformedValue"

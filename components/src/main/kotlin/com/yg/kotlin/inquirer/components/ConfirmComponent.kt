@@ -1,6 +1,12 @@
 package com.yg.kotlin.inquirer.components
 
-import com.yg.kotlin.inquirer.core.*
+import com.yg.kotlin.inquirer.core.Color
+import com.yg.kotlin.inquirer.core.Component
+import com.yg.kotlin.inquirer.core.Decoration
+import com.yg.kotlin.inquirer.core.Event
+import com.yg.kotlin.inquirer.core.KInquirer
+import com.yg.kotlin.inquirer.core.clearScreen
+import com.yg.kotlin.inquirer.core.style
 
 private class ConfirmComponent(private val message: String,
                                default: Boolean = false) : Component<Boolean> {
@@ -30,27 +36,22 @@ private class ConfirmComponent(private val message: String,
     }
 
     override fun render(): String {
-        val yesNo = if (interacting) {
-            when {
-                confirmed -> "[Yes] No "
-                else -> " Yes [No]"
-            }
-        } else {
-            if (confirmed) {
-                "Yes"
-            } else {
-                "No"
-            }.style(color = Color.White) + "\n"
+        val yesNo = when {
+            interacting && confirmed -> "[Yes] No "
+            interacting && !confirmed -> " Yes [No]"
+            !interacting && confirmed -> "Yes\n".style(color = Color.Cyan, decoration = Decoration.Bold)
+            !interacting && !confirmed -> "No\n".style(color = Color.Cyan, decoration = Decoration.Bold)
+            else -> ""
         }
-
         val questionMark = "?".style(color = Color.Green, decoration = Decoration.Bold)
+        val boldMessage = message.style(decoration = Decoration.Bold)
 
-        return "$questionMark " +
-                "${message.style(decoration = Decoration.Bold)} " +
-                yesNo.style(color = Color.Cyan, decoration = Decoration.Bold)
+        return "$questionMark $boldMessage $yesNo".clearScreen()
     }
 }
 
-fun KInquirer.promptConfirm(message: String): Boolean {
-    return prompt(ConfirmComponent(message))
+fun KInquirer.promptConfirm(
+        message: String,
+        default: Boolean = false): Boolean {
+    return prompt(ConfirmComponent(message, default))
 }
