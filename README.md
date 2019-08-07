@@ -24,7 +24,6 @@ println("Is Delivery: $isDelivery")
 ------
 
 #### Input
-Free text user input
 ```kotlin
 val comments: String = KInquirer.promptInput("Any comments on your purchase experience?")
 println("Comments: $comments")
@@ -34,7 +33,6 @@ println("Comments: $comments")
 ------
 
 #### Input Numbers
-User input accepts only numbers
 ```kotlin
 val quantity: BigDecimal = KInquirer.promptInputNumber("How many do you need?")
 ```
@@ -43,7 +41,6 @@ val quantity: BigDecimal = KInquirer.promptInputNumber("How many do you need?")
 ------
 
 #### Input Password
-Password input with hidden value
 ```kotlin
 val password: String = KInquirer.promptInputPassword("Enter Your Password:", hint = "password")
 ```
@@ -52,7 +49,6 @@ val password: String = KInquirer.promptInputPassword("Enter Your Password:", hin
 ------
 
 #### List
-List
 ```kotlin
 val size: String = KInquirer.promptList("What size do you need?", listOf("Large", "Medium", "Small"))
 println("Size: $size")
@@ -62,7 +58,6 @@ println("Size: $size")
 ------
 
 #### List Multi Selection
-List with multiple selection
 ```kotlin
 val size: String = KInquirer.promptList("What size do you need?", listOf("Large", "Medium", "Small"))
 ```
