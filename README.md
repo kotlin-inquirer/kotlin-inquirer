@@ -1,6 +1,6 @@
 # Kotlin-Inquirer [![Build Status](https://travis-ci.org/YanivGrama/kotlin-inquirer.svg?branch=master)](https://travis-ci.org/YanivGrama/kotlin-inquirer)
 
- A common interactive command line user interfaces written in `Kotlin` inspired by [Inquirer.js](https://github.com/SBoudrias/Inquirer.js "Inquirer.js")
+ A common interactive command line user interfaces written in [![Pure Kotlin](https://img.shields.io/badge/100%25-kotlin-blue.svg)](https://kotlinlang.org/). inspired by [Inquirer.js](https://github.com/SBoudrias/Inquirer.js "Inquirer.js")
 
 
 ## Installation
