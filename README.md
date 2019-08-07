@@ -17,6 +17,7 @@ cd kotlin-inquirer
 Free text user input
 ```kotlin
 val isDelivery: Boolean = KInquirer.promptConfirm("Is this for delivery?", default = false)
+println("Is Delivery: $isDelivery")
 ```
 <p align="center"><img src="/assets/confirm-component.gif?raw=true"/></p>
 
@@ -26,6 +27,7 @@ val isDelivery: Boolean = KInquirer.promptConfirm("Is this for delivery?", defau
 Free text user input
 ```kotlin
 val comments: String = KInquirer.promptInput("Any comments on your purchase experience?")
+println("Comments: $comments")
 ```
 <p align="center"><img src="/assets/input-component.gif?raw=true"/></p>
 
@@ -36,7 +38,7 @@ User input accepts only numbers
 ```kotlin
 val quantity: BigDecimal = KInquirer.promptInputNumber("How many do you need?")
 ```
-<p align="center"><img src="/assets/input-component.gif?raw=true"/></p>
+> Add GIF here
 
 ------
 
@@ -45,7 +47,7 @@ Password input with hidden value
 ```kotlin
 val password: String = KInquirer.promptInputPassword("Enter Your Password:", hint = "password")
 ```
-<p align="center"><img src="/assets/input-component.gif?raw=true"/></p>
+> Add GIF here
 
 ------
 
@@ -53,6 +55,7 @@ val password: String = KInquirer.promptInputPassword("Enter Your Password:", hin
 List
 ```kotlin
 val size: String = KInquirer.promptList("What size do you need?", listOf("Large", "Medium", "Small"))
+println("Size: $size")
 ```
 <p align="center"><img src="/assets/list-component.gif?raw=true"/></p>
 
@@ -63,7 +66,7 @@ List with multiple selection
 ```kotlin
 val size: String = KInquirer.promptList("What size do you need?", listOf("Large", "Medium", "Small"))
 ```
-<p align="center"><img src="/assets/input-component.gif?raw=true"/></p>
+> Add GIF here
 
 ------
 
@@ -81,7 +84,7 @@ val size: String = KInquirer.promptList("What size do you need?", listOf("Large"
 ##### Operation
 - [ ] Maven Central
 - [ ] Gifs
-- [ ] Travis-CI ?
+- [x] Travis-CI
 - [ ] codecov 
 - [ ] Icon
 - [ ] Examples
