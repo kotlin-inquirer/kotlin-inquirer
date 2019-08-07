@@ -3,6 +3,13 @@
  A common interactive command line user interfaces written in `Kotlin` inspired by [Inquirer.js](https://github.com/SBoudrias/Inquirer.js "Inquirer.js")
 
 
+## Installation
+
+```shell script
+git clone https://github.com/YanivGrama/kotlin-inquirer.git
+cd kotlin-inquirer
+./gradlew clean install
+```
 
 ## Usages
 

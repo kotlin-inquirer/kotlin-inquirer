@@ -10,7 +10,7 @@ allprojects {
 }
 
 
-description = 'kotlin-Inquirer Core'
+description = 'kotlin-Inquirer'
 group = "com.yg.kotlin.inquirer"
 version = 0.01
 
