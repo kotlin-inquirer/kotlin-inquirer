@@ -37,7 +37,7 @@ println("Comments: $comments")
 val quantity: BigDecimal = KInquirer.promptInputNumber("How many do you need?")
 println("Quantity: $quantity")
 ```
-> Add GIF here
+<p align="center"><img src="/assets/input-number-component.gif?raw=true"/></p>
 
 ------
 
@@ -46,7 +46,7 @@ println("Quantity: $quantity")
 val password: String = KInquirer.promptInputPassword("Enter Your Password:", hint = "password")
 println("Password: $password")
 ```
-<p align="center"><img src="/assets/input-password.gif?raw=true"/></p>
+<p align="center"><img src="/assets/input-password-component.gif?raw=true"/></p>
 
 ------
 
@@ -64,7 +64,7 @@ println("Size: $size")
 val size: String = KInquirer.promptList("What size do you need?", listOf("Large", "Medium", "Small"))
 println("Size: $size")
 ```
-<p align="center"><img src="/assets/list-multi.gif?raw=true"/></p>
+<p align="center"><img src="/assets/list-multi-component.gif?raw=true"/></p>
 
 ------
 
@@ -81,7 +81,7 @@ println("Size: $size")
 
 ##### Operation
 - [ ] Maven Central
-- [ ] Gifs
+- [x] GIFs
 - [x] Travis-CI
 - [ ] codecov 
 - [ ] Icon
