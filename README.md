@@ -35,6 +35,7 @@ println("Comments: $comments")
 #### Input Numbers
 ```kotlin
 val quantity: BigDecimal = KInquirer.promptInputNumber("How many do you need?")
+println("Quantity: $quantity")
 ```
 > Add GIF here
 
@@ -43,6 +44,7 @@ val quantity: BigDecimal = KInquirer.promptInputNumber("How many do you need?")
 #### Input Password
 ```kotlin
 val password: String = KInquirer.promptInputPassword("Enter Your Password:", hint = "password")
+println("Password: $password")
 ```
 > Add GIF here
 
@@ -60,6 +62,7 @@ println("Size: $size")
 #### List Multi Selection
 ```kotlin
 val size: String = KInquirer.promptList("What size do you need?", listOf("Large", "Medium", "Small"))
+println("Size: $size")
 ```
 > Add GIF here
 
