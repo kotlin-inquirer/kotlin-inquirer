@@ -64,7 +64,7 @@ println("Size: $size")
 val size: String = KInquirer.promptList("What size do you need?", listOf("Large", "Medium", "Small"))
 println("Size: $size")
 ```
-> Add GIF here
+<p align="center"><img src="/assets/list-multi.gif?raw=true"/></p>
 
 ------
 
