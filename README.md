@@ -1,4 +1,4 @@
-# Kotlin-Inquirer
+# Kotlin-Inquirer [![Build Status](https://travis-ci.org/YanivGrama/kotlin-inquirer.svg?branch=master)](https://travis-ci.org/YanivGrama/kotlin-inquirer)
 
  A common interactive command line user interfaces written in `Kotlin` inspired by [Inquirer.js](https://github.com/SBoudrias/Inquirer.js "Inquirer.js")
 
