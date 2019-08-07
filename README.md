@@ -14,7 +14,7 @@ cd kotlin-inquirer
 ## Usages
 
 #### Confirm
-Free text user input
+
 ```kotlin
 val isDelivery: Boolean = KInquirer.promptConfirm("Is this for delivery?", default = false)
 println("Is Delivery: $isDelivery")
