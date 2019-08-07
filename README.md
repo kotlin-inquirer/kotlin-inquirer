@@ -46,7 +46,7 @@ println("Quantity: $quantity")
 val password: String = KInquirer.promptInputPassword("Enter Your Password:", hint = "password")
 println("Password: $password")
 ```
-> Add GIF here
+<p align="center"><img src="/assets/input-password.gif?raw=true"/></p>
 
 ------
 
