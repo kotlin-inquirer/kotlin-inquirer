@@ -16,7 +16,8 @@ private class ListComponent<T>(val message: String,
                                val hint: String,
                                val multiSelection: Boolean,
                                val selectionColor: Color,
-                               val choices: List<Pair<String, T>>) : Component<List<T>> {
+                               val choices: List<Pair<String, T>>,
+                               val showPerPage: Int) : Component<List<T>> {
 
     private var selectedIndexes: Set<Int> = emptySet()
     private var courserIndex: Int = 0
@@ -65,12 +66,13 @@ private class ListComponent<T>(val message: String,
             val pointerIcon = if (isHover) " ❯" else "  "
             val boldChoice = if (isHover) choice.style(color = selectionColor, decoration = Decoration.Bold) else choice
             "$pointerIcon$checkIcon $boldChoice"
-        }
+        }.drop(max(courserIndex + 1 - showPerPage, 0)).take(showPerPage)
 
 
         val questionMark = "?".style(color = Color.Green, decoration = Decoration.Bold)
         val boldMessage = message.style(decoration = Decoration.Bold)
 
+        print("\u001b[0J")
         return if (interacting) {
             "$questionMark $boldMessage  ${hint.style(color = Color.Black)}\n" + menuChoices.joinToString("\n").moveCursorStartOfLine()
                     .moveCursor(CursorDirection.Up, menuChoices.size)
@@ -86,31 +88,64 @@ fun KInquirer.promptList(
         message: String,
         choices: List<String>,
         hint: String = "",
-        selectionColor: Color = Color.Cyan): String {
-    return promptListObject(message = message, choices = choices.map { it to it }, hint = hint, selectionColor = selectionColor)
+        selectionColor: Color = Color.Cyan,
+        showPerPage: Int = 10): String {
+
+    return promptListObject(
+            message = message,
+            choices = choices.map { it to it },
+            hint = hint,
+            selectionColor = selectionColor,
+            showPerPage = showPerPage
+    )
 }
 
 fun <T> KInquirer.promptListObject(
         message: String,
         choices: List<Pair<String, T>>,
         hint: String = "",
-        selectionColor: Color = Color.Cyan): T {
-    return prompt(ListComponent(message, hint, multiSelection = false, selectionColor = selectionColor, choices = choices)).first()
+        selectionColor: Color = Color.Cyan,
+        showPerPage: Int = 10): T {
+
+    return prompt(ListComponent(
+            message = message,
+            hint = hint,
+            multiSelection = false,
+            selectionColor = selectionColor,
+            choices = choices,
+            showPerPage = showPerPage
+    )).first()
 }
 
 fun KInquirer.promptListMulti(
         message: String,
         choices: List<String>,
         hint: String = "",
-        selectionColor: Color = Color.Cyan): List<String> {
+        selectionColor: Color = Color.Cyan,
+        showPerPage: Int = 10): List<String> {
 
-    return promptListMultiObject(message = message, choices = choices.map { it to it }, hint = hint, selectionColor = selectionColor)
+    return promptListMultiObject(
+            message = message,
+            choices = choices.map { it to it },
+            hint = hint,
+            selectionColor = selectionColor,
+            showPerPage = showPerPage
+    )
 }
 
 fun <T> KInquirer.promptListMultiObject(
         message: String,
         choices: List<Pair<String, T>>,
         hint: String = "",
-        selectionColor: Color = Color.Cyan): List<T> {
-    return prompt(ListComponent(message, hint, multiSelection = true, selectionColor = selectionColor, choices = choices))
+        selectionColor: Color = Color.Cyan,
+        showPerPage: Int = 10): List<T> {
+
+    return prompt(ListComponent(
+            message = message,
+            hint = hint,
+            multiSelection = true,
+            selectionColor = selectionColor,
+            choices = choices,
+            showPerPage = showPerPage
+    ))
 }
