@@ -77,7 +77,6 @@ fun KInquirer.promptInputPassword(
         default: String = "",
         hint: String = "",
         mask: String = "*"): String {
-
     val validation: (s: String) -> Boolean = { true }
     val filter: (s: String) -> Boolean = { true }
     val transform: (s: String) -> String = { it.map { mask }.joinToString("") }
@@ -89,9 +88,9 @@ fun KInquirer.promptInputNumber(
         message: String,
         default: String = "",
         hint: String = "",
-        validation: (s: String) -> Boolean = { it.matches("\\d+.?\\d*".toRegex()) },
-        filter: (s: String) -> Boolean = { it.matches("\\d*\\.?\\d*".toRegex()) },
         transform: (s: String) -> String = { it }): BigDecimal {
+    val validation: (s: String) -> Boolean = { it.matches("\\d+.?\\d*".toRegex()) }
+    val filter: (s: String) -> Boolean = { it.matches("\\d*\\.?\\d*".toRegex()) }
 
     return BigDecimal(prompt(InputComponent(message, default, hint, validation, filter, transform)))
 }

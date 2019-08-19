@@ -15,3 +15,25 @@ val size: String = KInquirer.promptList("What size do you need?", listOf("Large"
 val quantity: BigDecimal = KInquirer.promptInputNumber("How many do you need?")
 val toppings: List<String> = KInquirer.promptListMulti("What about the toppings?", listOf("Pepperoni", "Mushrooms", "Tomatoes", "Onions"))
 val comments: String = KInquirer.promptInput("Any comments on your purchase experience?", hint = "Nope, all good!")
+
+val order = PizzaOrder(
+        isDelivery = isDelivery,
+        phoneNumber = phoneNumber,
+        size = size,
+        quantity = quantity,
+        toppings = toppings,
+        comments = comments
+)
+
+println("Your order:")
+println(order)
+
+
+data class PizzaOrder(
+        val isDelivery: Boolean,
+        val phoneNumber: String,
+        val size: String,
+        val quantity: BigDecimal,
+        val toppings: List<String>,
+        val comments: String
+)

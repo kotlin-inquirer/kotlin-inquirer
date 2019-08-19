@@ -1,29 +1,19 @@
 @file:DependsOn("com.yg.kotlin.inquirer:kotlin-inquirer:0.01")
 
-import com.yg.kotlin.inquirer.components.promptConfirm
-import com.yg.kotlin.inquirer.components.promptInput
-import com.yg.kotlin.inquirer.components.promptInputNumber
-import com.yg.kotlin.inquirer.components.promptInputPassword
-import com.yg.kotlin.inquirer.components.promptList
-import com.yg.kotlin.inquirer.components.promptListMulti
+import com.yg.kotlin.inquirer.components.promptListMultiObject
+import com.yg.kotlin.inquirer.components.promptListObject
 import com.yg.kotlin.inquirer.core.KInquirer
 
-val componentName = KInquirer.promptList("What component do you want to test?", listOf(
-        "Input",
-        "InputNumber",
-        "InputPassword",
-        "Confirm",
-        "List",
-        "ListMultiSelection"
-))
 
-when (componentName) {
-    "Input" -> KInquirer.promptInput("Enter Your Name:", hint = "(Full Name)")
-    "InputNumber" -> KInquirer.promptInputNumber("Enter Your Age:")
-    "InputPassword" -> KInquirer.promptInputPassword("Enter Your Password:")
-    "Confirm" -> KInquirer.promptConfirm("Is this correct?")
-    "List" -> KInquirer.promptList("Select Something?", listOf("Hello", "World", "Foo", "Bar"))
-    "ListMultiSelection" -> KInquirer.promptListMulti("Pick Some Stuff:", listOf("A", "B", "C", "D"))
-}
+data class Food(val id: Int, val name: String, val price: Int)
 
+val foodList = listOf(
+        Food(1, "pizza", 21),
+        Food(2, "pasta", 24),
+        Food(3, "hamburger", 30)
+)
 
+val selectedDishList = KInquirer.promptListMultiObject("What component do you want to test?", foodList.map { it.name to it })
+val selectedDish = KInquirer.promptListObject("What component do you want to test?", selectedDishList.map { it.name to it })
+
+println(selectedDish)

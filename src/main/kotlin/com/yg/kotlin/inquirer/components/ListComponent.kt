@@ -1,21 +1,29 @@
 package com.yg.kotlin.inquirer.components
 
-import com.yg.kotlin.inquirer.core.*
+import com.yg.kotlin.inquirer.core.Color
+import com.yg.kotlin.inquirer.core.Component
+import com.yg.kotlin.inquirer.core.CursorDirection
+import com.yg.kotlin.inquirer.core.Decoration
+import com.yg.kotlin.inquirer.core.Event
+import com.yg.kotlin.inquirer.core.KInquirer
+import com.yg.kotlin.inquirer.core.moveCursor
+import com.yg.kotlin.inquirer.core.moveCursorStartOfLine
+import com.yg.kotlin.inquirer.core.style
 import kotlin.math.max
 import kotlin.math.min
 
-private class ListComponent(val message: String,
-                            val hint: String,
-                            val multiSelection: Boolean,
-                            val selectionColor: Color,
-                            val choices: List<String>) : Component<List<String>> {
+private class ListComponent<T>(val message: String,
+                               val hint: String,
+                               val multiSelection: Boolean,
+                               val selectionColor: Color,
+                               val choices: List<Pair<String, T>>) : Component<List<T>> {
 
     private var selectedIndexes: Set<Int> = emptySet()
     private var courserIndex: Int = 0
     private var interacting = true
 
 
-    override fun value(): List<String> = choices.filterIndexed { index, _ -> selectedIndexes.contains(index) }
+    override fun value() = choices.filterIndexed { index, _ -> selectedIndexes.contains(index) }.map { it.second }
 
     override fun interacting(): Boolean = interacting
 
@@ -46,7 +54,7 @@ private class ListComponent(val message: String,
     }
 
     override fun render(): String {
-        val menuChoices = choices.mapIndexed { index, choice ->
+        val menuChoices = choices.map { it.first }.mapIndexed { index, choice ->
             val isChecked = selectedIndexes.contains(index)
             val isHover = courserIndex == index
             val checkIcon = if (multiSelection) {
@@ -68,7 +76,7 @@ private class ListComponent(val message: String,
                     .moveCursor(CursorDirection.Up, menuChoices.size)
                     .moveCursor(CursorDirection.Right, message.length + 3)
         } else {
-            "$questionMark $boldMessage ${selectedIndexes.joinToString { choices[it] }.style(color = selectionColor, decoration = Decoration.Bold)}\n\u001b[0J"
+            "$questionMark $boldMessage ${selectedIndexes.joinToString { choices[it].first }.style(color = selectionColor, decoration = Decoration.Bold)}\n\u001b[0J"
         }
 
     }
@@ -79,6 +87,14 @@ fun KInquirer.promptList(
         choices: List<String>,
         hint: String = "",
         selectionColor: Color = Color.Cyan): String {
+    return promptListObject(message = message, choices = choices.map { it to it }, hint = hint, selectionColor = selectionColor)
+}
+
+fun <T> KInquirer.promptListObject(
+        message: String,
+        choices: List<Pair<String, T>>,
+        hint: String = "",
+        selectionColor: Color = Color.Cyan): T {
     return prompt(ListComponent(message, hint, multiSelection = false, selectionColor = selectionColor, choices = choices)).first()
 }
 
@@ -87,5 +103,14 @@ fun KInquirer.promptListMulti(
         choices: List<String>,
         hint: String = "",
         selectionColor: Color = Color.Cyan): List<String> {
+
+    return promptListMultiObject(message = message, choices = choices.map { it to it }, hint = hint, selectionColor = selectionColor)
+}
+
+fun <T> KInquirer.promptListMultiObject(
+        message: String,
+        choices: List<Pair<String, T>>,
+        hint: String = "",
+        selectionColor: Color = Color.Cyan): List<T> {
     return prompt(ListComponent(message, hint, multiSelection = true, selectionColor = selectionColor, choices = choices))
 }
