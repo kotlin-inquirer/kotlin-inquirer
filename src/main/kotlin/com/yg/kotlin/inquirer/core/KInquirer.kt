@@ -34,8 +34,6 @@ object KInquirer {
 
     private fun renderView(view: String) {
         print("\u001b[1K\u001b[0K\r")
-//        print("\u001b[0K")
-//        print("\r")
         print(view)
     }
 

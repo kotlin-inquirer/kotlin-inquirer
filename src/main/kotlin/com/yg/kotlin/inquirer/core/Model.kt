@@ -1,6 +1,7 @@
 package com.yg.kotlin.inquirer.core
 
 data class State(val inProgress: Boolean, val component: Component<*>)
+data class Choice<T>(val name: String, val data: T)
 
 sealed class Event {
     object PressUp : Event()
