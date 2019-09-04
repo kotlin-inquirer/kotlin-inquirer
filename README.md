@@ -20,24 +20,6 @@ dependencies {
 }
 ```
 
-### Maven
-```xml
-<repositories>
-  <repository>
-    <id>jitpack.io</id>
-    <url>https://jitpack.io</url>
-  </repository>
-</repositories>
-```
-
-```xml
-<dependency>
-  <groupId>com.github.YanivGrama</groupId>
-  <artifactId>kotlin-inquirer</artifactId>
-  <version>v0.0.2-alpha</version>
-</dependency>
-```
-
 ## Usages
 
 #### Confirm
