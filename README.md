@@ -3,12 +3,36 @@
  A common interactive command line user interfaces written in [![Pure Kotlin](https://img.shields.io/badge/100%25-kotlin-blue.svg)](https://kotlinlang.org/) inspired by [Inquirer.js](https://github.com/SBoudrias/Inquirer.js "Inquirer.js")
 
 
-## Installation
+## Download
 
-```shell script
-git clone https://github.com/YanivGrama/kotlin-inquirer.git
-cd kotlin-inquirer
-./gradlew clean install
+### Gradle
+```
+allprojects {
+ repositories {
+			 maven { url 'https://jitpack.io' }
+  }
+}
+
+dependencies {
+  implementation 'com.github.YanivGrama:kotlin-inquirer:v0.0.1-alpha'
+}
+```
+
+### Maven
+```
+<repositories>
+		<repository>
+		    <id>jitpack.io</id>
+		    <url>https://jitpack.io</url>
+		</repository>
+	</repositories>
+ ```
+```
+	<dependency>
+	    <groupId>com.github.YanivGrama</groupId>
+	    <artifactId>kotlin-inquirer</artifactId>
+	    <version>v0.0.1-alpha</version>
+	</dependency>
 ```
 
 ## Usages
