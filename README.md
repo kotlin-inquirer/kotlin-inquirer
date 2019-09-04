@@ -8,31 +8,34 @@
 ### Gradle
 ```
 allprojects {
- repositories {
-			 maven { url 'https://jitpack.io' }
-  }
+	repositories {
+		maven { url 'https://jitpack.io' }
+	}
 }
+```
 
+```
 dependencies {
-  implementation 'com.github.YanivGrama:kotlin-inquirer:v0.0.1-alpha'
+	implementation 'com.github.YanivGrama:kotlin-inquirer:v0.0.1-alpha'
 }
 ```
 
 ### Maven
 ```
 <repositories>
-		<repository>
-		    <id>jitpack.io</id>
-		    <url>https://jitpack.io</url>
-		</repository>
-	</repositories>
- ```
+	<repository>
+		<id>jitpack.io</id>
+		<url>https://jitpack.io</url>
+	</repository>
+</repositories>
 ```
-	<dependency>
-	    <groupId>com.github.YanivGrama</groupId>
-	    <artifactId>kotlin-inquirer</artifactId>
-	    <version>v0.0.1-alpha</version>
-	</dependency>
+
+```
+<dependency>
+	<groupId>com.github.YanivGrama</groupId>
+	<artifactId>kotlin-inquirer</artifactId>
+	<version>v0.0.1-alpha</version>
+</dependency>
 ```
 
 ## Usages
