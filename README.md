@@ -6,7 +6,7 @@
 ## Download
 
 ### Gradle
-```
+```groovy
 allprojects {
   repositories {
     maven { url 'https://jitpack.io' }
@@ -14,14 +14,14 @@ allprojects {
 }
 ```
 
-```
+```groovy
 dependencies {
   implementation 'com.github.YanivGrama:kotlin-inquirer:v0.0.2-alpha'
 }
 ```
 
 ### Maven
-```
+```xml
 <repositories>
   <repository>
     <id>jitpack.io</id>
@@ -30,7 +30,7 @@ dependencies {
 </repositories>
 ```
 
-```
+```xml
 <dependency>
   <groupId>com.github.YanivGrama</groupId>
   <artifactId>kotlin-inquirer</artifactId>
