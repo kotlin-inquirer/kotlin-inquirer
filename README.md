@@ -16,7 +16,7 @@ allprojects {
 
 ```
 dependencies {
-  implementation 'com.github.YanivGrama:kotlin-inquirer:v0.0.1-alpha'
+  implementation 'com.github.YanivGrama:kotlin-inquirer:v0.0.2-alpha'
 }
 ```
 
@@ -34,7 +34,7 @@ dependencies {
 <dependency>
   <groupId>com.github.YanivGrama</groupId>
   <artifactId>kotlin-inquirer</artifactId>
-  <version>v0.0.1-alpha</version>
+  <version>v0.0.2-alpha</version>
 </dependency>
 ```
 
