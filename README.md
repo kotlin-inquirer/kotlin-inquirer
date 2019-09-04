@@ -1,4 +1,4 @@
-# Kotlin-Inquirer [![Build Status](https://travis-ci.org/YanivGrama/kotlin-inquirer.svg?branch=master)](https://travis-ci.org/YanivGrama/kotlin-inquirer) [![Apache License V.2](https://img.shields.io/badge/license-Apache%20V.2-blue.svg)](https://github.com/YanivGrama/kotlin-inquirer/blob/master/LICENSE) 
+# Kotlin-Inquirer [![Build Status](https://travis-ci.org/YanivGrama/kotlin-inquirer.svg?branch=master)](https://travis-ci.org/YanivGrama/kotlin-inquirer) [![Apache License V.2](https://img.shields.io/badge/license-Apache%20V.2-blue.svg)](https://github.com/YanivGrama/kotlin-inquirer/blob/master/LICENSE) [![](https://jitpack.io/v/YanivGrama/kotlin-inquirer.svg)](https://jitpack.io/#YanivGrama/kotlin-inquirer)
 
  A common interactive command line user interfaces written in [![Pure Kotlin](https://img.shields.io/badge/100%25-kotlin-blue.svg)](https://kotlinlang.org/) inspired by [Inquirer.js](https://github.com/SBoudrias/Inquirer.js "Inquirer.js")
 
