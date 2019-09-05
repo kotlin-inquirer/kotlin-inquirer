@@ -205,3 +205,5 @@ records:
     content: "\e[1K\e[0K\r\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mAny comments on your purchase experience?\e[1m\e[0m \e[1m\e[36mcool!!\e[36m\e[1m\e[0m\r\n"
   - delay: 11
     content: "Your order:\r\nPizzaOrder(isDelivery=true, phoneNumber=0837236428, size=Large, quantity=2, toppings=[Mushrooms, Tomatoes], comments=cool!!)\r\n"
+  - delay: 2000
+    content: "\r\n"
