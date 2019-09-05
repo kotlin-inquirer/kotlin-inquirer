@@ -1,4 +1,5 @@
-@file:DependsOn("com.yg.kotlin.inquirer:kotlin-inquirer:0.01")
+@file:MavenRepository("jitpack", "https://jitpack.io")
+@file:DependsOn("com.github.YanivGrama:kotlin-inquirer:v0.0.2-alpha")
 
 import com.yg.kotlin.inquirer.components.promptConfirm
 import com.yg.kotlin.inquirer.components.promptInput
@@ -8,7 +9,16 @@ import com.yg.kotlin.inquirer.components.promptListMulti
 import com.yg.kotlin.inquirer.core.KInquirer
 import java.math.BigDecimal
 
-println("Hi, welcome to Kotlin Pizza")
+data class PizzaOrder(
+    val isDelivery: Boolean,
+    val phoneNumber: String,
+    val size: String,
+    val quantity: BigDecimal,
+    val toppings: List<String>,
+    val comments: String
+)
+
+println("Hi, welcome to Kotlin's Pizza")
 val isDelivery: Boolean = KInquirer.promptConfirm("Is this for delivery?", default = false)
 val phoneNumber: String = KInquirer.promptInput("What's your phone number?", filter = { s -> s.matches("\\d+".toRegex()) })
 val size: String = KInquirer.promptList("What size do you need?", listOf("Large", "Medium", "Small"))
@@ -17,23 +27,13 @@ val toppings: List<String> = KInquirer.promptListMulti("What about the toppings?
 val comments: String = KInquirer.promptInput("Any comments on your purchase experience?", hint = "Nope, all good!")
 
 val order = PizzaOrder(
-        isDelivery = isDelivery,
-        phoneNumber = phoneNumber,
-        size = size,
-        quantity = quantity,
-        toppings = toppings,
-        comments = comments
+    isDelivery = isDelivery,
+    phoneNumber = phoneNumber,
+    size = size,
+    quantity = quantity,
+    toppings = toppings,
+    comments = comments
 )
 
 println("Your order:")
 println(order)
-
-
-data class PizzaOrder(
-        val isDelivery: Boolean,
-        val phoneNumber: String,
-        val size: String,
-        val quantity: BigDecimal,
-        val toppings: List<String>,
-        val comments: String
-)

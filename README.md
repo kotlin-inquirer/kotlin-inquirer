@@ -5,6 +5,15 @@
 [![](https://jitpack.io/v/YanivGrama/kotlin-inquirer.svg)](https://jitpack.io/#YanivGrama/kotlin-inquirer)
 
 > A common interactive command line user interfaces written in [![Pure Kotlin](https://img.shields.io/badge/100%25-kotlin-blue.svg)](https://kotlinlang.org/) inspired by [Inquirer.js](https://github.com/SBoudrias/Inquirer.js "Inquirer.js") 
+<p align="center"><img src="/assets/pizza.gif?raw=true"/></p>
+
+## Run Demo
+Run demo using [kscript](https://github.com/holgerbrandl/kscript "kscript"):
+```shell script
+git clone https://github.com/YanivGrama/kotlin-inquirer.git
+cd kotlin-inquirer
+kscript ./scripts/src/pizza.kts
+```
 
 ## Download
 

@@ -1,0 +1,207 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: bash -l
+  
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: /Users/yanivgrama/dev/kotlin-inquirer
+  
+  # Export additional ENV variables
+  env:
+    recording: true
+  
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 64
+  
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 12
+  
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+  
+  # Quality
+  # 1 - 100
+  quality: 100
+  
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+  
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: 2000
+  
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: floating
+    title: Kotlin-Inquirer
+    style:
+      border: 0px black solid
+      boxShadow: none
+      margin: 0px
+  
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+  
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+  
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
+  
+  # The size of the font
+  fontSize: 30
+  
+  # The height of lines
+  lineHeight: 1
+  
+  # The spacing between letters
+  letterSpacing: 0
+  
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+  
+# Records, feel free to edit them
+records:
+  - delay: 451
+    content: "Hi, welcome to Kotlin's Pizza\r\n\e[1K\e[0K\r\r\e[0J\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mIs this for delivery?\e[1m\e[0m  Yes [No]"
+  - delay: 1517
+    content: "\e[1K\e[0K\r\r\e[0J\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mIs this for delivery?\e[1m\e[0m [Yes] No "
+  - delay: 746
+    content: "\e[1K\e[0K\r\r\e[0J\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mIs this for delivery?\e[1m\e[0m  Yes [No]"
+  - delay: 483
+    content: "\e[1K\e[0K\r\r\e[0J\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mIs this for delivery?\e[1m\e[0m [Yes] No "
+  - delay: 986
+    content: "\e[1K\e[0K\r\r\e[0J\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mIs this for delivery?\e[1m\e[0m \e[1m\e[36mYes\r\n\e[36m\e[1m\e[0m"
+  - delay: 25
+    content: "\e[1K\e[0K\r\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mWhat's your phone number?\e[1m\e[0m "
+  - delay: 1921
+    content: "\e[1K\e[0K\r\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mWhat's your phone number?\e[1m\e[0m 0"
+  - delay: 212
+    content: "\e[1K\e[0K\r\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mWhat's your phone number?\e[1m\e[0m 08"
+  - delay: 149
+    content: "\e[1K\e[0K\r\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mWhat's your phone number?\e[1m\e[0m 083"
+  - delay: 116
+    content: "\e[1K\e[0K\r\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mWhat's your phone number?\e[1m\e[0m 0837"
+  - delay: 434
+    content: "\e[1K\e[0K\r\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mWhat's your phone number?\e[1m\e[0m 08372"
+  - delay: 302
+    content: "\e[1K\e[0K\r\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mWhat's your phone number?\e[1m\e[0m 083723"
+  - delay: 110
+    content: "\e[1K\e[0K\r\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mWhat's your phone number?\e[1m\e[0m 0837236"
+  - delay: 136
+    content: "\e[1K\e[0K\r\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mWhat's your phone number?\e[1m\e[0m 08372364"
+  - delay: 292
+    content: "\e[1K\e[0K\r\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mWhat's your phone number?\e[1m\e[0m 083723642"
+  - delay: 107
+    content: "\e[1K\e[0K\r\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mWhat's your phone number?\e[1m\e[0m 0837236428"
+  - delay: 1363
+    content: "\e[1K\e[0K\r\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mWhat's your phone number?\e[1m\e[0m 08372364282"
+  - delay: 845
+    content: "\e[1K\e[0K\r\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mWhat's your phone number?\e[1m\e[0m 0837236428"
+  - delay: 813
+    content: "\e[1K\e[0K\r\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mWhat's your phone number?\e[1m\e[0m \e[1m\e[36m0837236428\e[36m\e[1m\e[0m\r\n"
+  - delay: 29
+    content: "\e[0J\e[1K\e[0K\r\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mWhat size do you need?\e[1m\e[0m  \e[37m\e[37m\e[0m\r\n ❯ \e[1m\e[36mLarge\e[36m\e[1m\e[0m\r\n   Medium\r\n   Small\r\e[3A\e[25C"
+  - delay: 965
+    content: "\e[0J\e[1K\e[0K\r\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mWhat size do you need?\e[1m\e[0m  \e[37m\e[37m\e[0m\r\n   Large\r\n ❯ \e[1m\e[36mMedium\e[36m\e[1m\e[0m\r\n   Small\r\e[3A\e[25C"
+  - delay: 202
+    content: "\e[0J\e[1K\e[0K\r\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mWhat size do you need?\e[1m\e[0m  \e[37m\e[37m\e[0m\r\n   Large\r\n   Medium\r\n ❯ \e[1m\e[36mSmall\e[36m\e[1m\e[0m\r\e[3A\e[25C"
+  - delay: 368
+    content: "\e[0J\e[1K\e[0K\r\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mWhat size do you need?\e[1m\e[0m  \e[37m\e[37m\e[0m\r\n   Large\r\n ❯ \e[1m\e[36mMedium\e[36m\e[1m\e[0m\r\n   Small\r\e[3A\e[25C"
+  - delay: 2259
+    content: "\e[0J\e[1K\e[0K\r\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mWhat size do you need?\e[1m\e[0m  \e[37m\e[37m\e[0m\r\n ❯ \e[1m\e[36mLarge\e[36m\e[1m\e[0m\r\n   Medium\r\n   Small\r\e[3A\e[25C"
+  - delay: 599
+    content: "\e[0J\e[1K\e[0K\r\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mWhat size do you need?\e[1m\e[0m \e[1m\e[36mLarge\e[36m\e[1m\e[0m\r\n\e[0J"
+  - delay: 13
+    content: "\e[1K\e[0K\r\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mHow many do you need?\e[1m\e[0m "
+  - delay: 1793
+    content: "\e[1K\e[0K\r\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mHow many do you need?\e[1m\e[0m 2"
+  - delay: 749
+    content: "\e[1K\e[0K\r\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mHow many do you need?\e[1m\e[0m \e[1m\e[36m2\e[36m\e[1m\e[0m\r\n"
+  - delay: 10
+    content: "\e[0J\e[1K\e[0K\r\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mWhat about the toppings?\e[1m\e[0m  \e[37m\e[37m\e[0m\r\n ❯ ◯  \e[1m\e[36mPepperoni\e[36m\e[1m\e[0m\r\n   ◯  Mushrooms\r\n   ◯  Tomatoes\r\n   ◯  Onions\r\e[4A\e[27C"
+  - delay: 1268
+    content: "\e[0J\e[1K\e[0K\r\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mWhat about the toppings?\e[1m\e[0m  \e[37m\e[37m\e[0m\r\n   ◯  Pepperoni\r\n ❯ ◯  \e[1m\e[36mMushrooms\e[36m\e[1m\e[0m\r\n   ◯  Tomatoes\r\n   ◯  Onions\r\e[4A\e[27C"
+  - delay: 568
+    content: "\e[0J\e[1K\e[0K\r\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mWhat about the toppings?\e[1m\e[0m  \e[37m\e[37m\e[0m\r\n   ◯  Pepperoni\r\n ❯\e[32m ◉ \e[32m\e[0m \e[1m\e[36mMushrooms\e[36m\e[1m\e[0m\r\n   ◯  Tomatoes\r\n   ◯  Onions\r\e[4A\e[27C"
+  - delay: 883
+    content: "\e[0J\e[1K\e[0K\r\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mWhat about the toppings?\e[1m\e[0m  \e[37m\e[37m\e[0m\r\n   ◯  Pepperoni\r\n  \e[32m ◉ \e[32m\e[0m Mushrooms\r\n ❯ ◯  \e[1m\e[36mTomatoes\e[36m\e[1m\e[0m\r\n   ◯  Onions\r\e[4A\e[27C"
+  - delay: 168
+    content: "\e[0J\e[1K\e[0K\r\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mWhat about the toppings?\e[1m\e[0m  \e[37m\e[37m\e[0m\r\n   ◯  Pepperoni\r\n  \e[32m ◉ \e[32m\e[0m Mushrooms\r\n   ◯  Tomatoes\r\n ❯ ◯  \e[1m\e[36mOnions\e[36m\e[1m\e[0m\r\e[4A\e[27C"
+  - delay: 369
+    content: "\e[0J\e[1K\e[0K\r\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mWhat about the toppings?\e[1m\e[0m  \e[37m\e[37m\e[0m\r\n   ◯  Pepperoni\r\n  \e[32m ◉ \e[32m\e[0m Mushrooms\r\n   ◯  Tomatoes\r\n ❯\e[32m ◉ \e[32m\e[0m \e[1m\e[36mOnions\e[36m\e[1m\e[0m\r\e[4A\e[27C"
+  - delay: 1510
+    content: "\e[0J\e[1K\e[0K\r\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mWhat about the toppings?\e[1m\e[0m  \e[37m\e[37m\e[0m\r\n   ◯  Pepperoni\r\n  \e[32m ◉ \e[32m\e[0m Mushrooms\r\n   ◯  Tomatoes\r\n ❯ ◯  \e[1m\e[36mOnions\e[36m\e[1m\e[0m\r\e[4A\e[27C"
+  - delay: 642
+    content: "\e[0J\e[1K\e[0K\r\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mWhat about the toppings?\e[1m\e[0m  \e[37m\e[37m\e[0m\r\n   ◯  Pepperoni\r\n  \e[32m ◉ \e[32m\e[0m Mushrooms\r\n ❯ ◯  \e[1m\e[36mTomatoes\e[36m\e[1m\e[0m\r\n   ◯  Onions\r\e[4A\e[27C"
+  - delay: 472
+    content: "\e[0J\e[1K\e[0K\r\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mWhat about the toppings?\e[1m\e[0m  \e[37m\e[37m\e[0m\r\n   ◯  Pepperoni\r\n  \e[32m ◉ \e[32m\e[0m Mushrooms\r\n ❯\e[32m ◉ \e[32m\e[0m \e[1m\e[36mTomatoes\e[36m\e[1m\e[0m\r\n   ◯  Onions\r\e[4A\e[27C"
+  - delay: 785
+    content: "\e[0J\e[1K\e[0K\r\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mWhat about the toppings?\e[1m\e[0m \e[1m\e[36mMushrooms, Tomatoes\e[36m\e[1m\e[0m\r\n\e[0J"
+  - delay: 10
+    content: "\e[1K\e[0K\r\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mAny comments on your purchase experience?\e[1m\e[0m   \e[37mNope, all good!\e[37m\e[0m\e[17D"
+  - delay: 1753
+    content: "\e[1K\e[0K\r\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mAny comments on your purchase experience?\e[1m\e[0m c"
+  - delay: 173
+    content: "\e[1K\e[0K\r\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mAny comments on your purchase experience?\e[1m\e[0m co"
+  - delay: 134
+    content: "\e[1K\e[0K\r\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mAny comments on your purchase experience?\e[1m\e[0m coo"
+  - delay: 184
+    content: "\e[1K\e[0K\r\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mAny comments on your purchase experience?\e[1m\e[0m cool"
+  - delay: 530
+    content: "\e[1K\e[0K\r\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mAny comments on your purchase experience?\e[1m\e[0m cool!"
+  - delay: 169
+    content: "\e[1K\e[0K\r\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mAny comments on your purchase experience?\e[1m\e[0m cool!!"
+  - delay: 1219
+    content: "\e[1K\e[0K\r\e[1m\e[32m?\e[32m\e[1m\e[0m \e[1mAny comments on your purchase experience?\e[1m\e[0m \e[1m\e[36mcool!!\e[36m\e[1m\e[0m\r\n"
+  - delay: 11
+    content: "Your order:\r\nPizzaOrder(isDelivery=true, phoneNumber=0837236428, size=Large, quantity=2, toppings=[Mushrooms, Tomatoes], comments=cool!!)\r\n"
