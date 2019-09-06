@@ -5,9 +5,12 @@
 [![](https://jitpack.io/v/YanivGrama/kotlin-inquirer.svg)](https://jitpack.io/#YanivGrama/kotlin-inquirer)
 
 > A common interactive command line user interfaces written in [![Pure Kotlin](https://img.shields.io/badge/100%25-kotlin-blue.svg)](https://kotlinlang.org/) inspired by [Inquirer.js](https://github.com/SBoudrias/Inquirer.js "Inquirer.js") 
-<p align="center"><img src="/assets/pizza.gif?raw=true"/></p>
 
-## Run Demo Using [kscript](https://github.com/holgerbrandl/kscript "kscript")
+<p align="center">
+  <img src="/assets/pizza.gif?raw=true"/>
+</p>
+
+## :rocket: Run Demo Using [kscript](https://github.com/holgerbrandl/kscript "kscript")
 Remote scriplet [raw-URL](https://raw.githubusercontent.com/YanivGrama/kotlin-inquirer/master/scripts/src/pizza.kts 
 "pizza.kts") 
 ```shell script
@@ -20,7 +23,7 @@ cd kotlin-inquirer
 kscript ./scripts/src/pizza.kts
 ```
 
-## Download
+## :cloud: Download
 
 ### Gradle
 ```groovy
@@ -37,7 +40,7 @@ dependencies {
 }
 ```
 
-## Usages
+## :clipboard: Usages
 
 #### Confirm
 
@@ -94,8 +97,8 @@ println("Size: $size")
 
 ------
 
-#### Todo
-##### Components
+### :crystal_ball: Roadmap
+#### Components
 - [x] Confirm
 - [x] Input
 - [x] Input Numbers
@@ -105,7 +108,7 @@ println("Size: $size")
 - [ ] Input validation error message
 - [ ] Support Hint
 
-##### Operation
+#### Operation
 - [ ] Maven Central
 - [x] GIFs
 - [x] Travis-CI
