@@ -7,7 +7,7 @@
 > A common interactive command line user interfaces written in [![Pure Kotlin](https://img.shields.io/badge/100%25-kotlin-blue.svg)](https://kotlinlang.org/) inspired by [Inquirer.js](https://github.com/SBoudrias/Inquirer.js "Inquirer.js") 
 
 <p align="center">
-  <img src="/assets/pizza.gif?raw=true"/>
+  <img src="/assets/pizza.gif?raw=true" width="80%"/>
 </p>
 
 ## :rocket: Run Demo Using [kscript](https://github.com/holgerbrandl/kscript "kscript")
@@ -48,7 +48,9 @@ dependencies {
 val isDelivery: Boolean = KInquirer.promptConfirm("Is this for delivery?", default = false)
 println("Is Delivery: $isDelivery")
 ```
-<p align="center"><img src="/assets/confirm-component.gif?raw=true"/></p>
+<p align="center">
+  <img src="/assets/confirm-component.gif?raw=true" width="80%"/>
+</p>
 
 ------
 
@@ -57,7 +59,9 @@ println("Is Delivery: $isDelivery")
 val comments: String = KInquirer.promptInput("Any comments on your purchase experience?")
 println("Comments: $comments")
 ```
-<p align="center"><img src="/assets/input-component.gif?raw=true"/></p>
+<p align="center">
+  <img src="/assets/input-component.gif?raw=true" width="80%"/>
+</p>
 
 ------
 
@@ -66,7 +70,9 @@ println("Comments: $comments")
 val quantity: BigDecimal = KInquirer.promptInputNumber("How many do you need?")
 println("Quantity: $quantity")
 ```
-<p align="center"><img src="/assets/input-number-component.gif?raw=true"/></p>
+<p align="center">
+  <img src="/assets/input-number-component.gif?raw=true" width="80%"/>
+</p>
 
 ------
 
@@ -75,7 +81,10 @@ println("Quantity: $quantity")
 val password: String = KInquirer.promptInputPassword("Enter Your Password:", hint = "password")
 println("Password: $password")
 ```
-<p align="center"><img src="/assets/input-password-component.gif?raw=true"/></p>
+<p align="center">
+  <img src="/assets/input-password-component.gif?raw=true" width="80%"/>
+</p>
+
 
 ------
 
@@ -84,7 +93,9 @@ println("Password: $password")
 val size: String = KInquirer.promptList("What size do you need?", listOf("Large", "Medium", "Small"))
 println("Size: $size")
 ```
-<p align="center"><img src="/assets/list-component.gif?raw=true"/></p>
+<p align="center">
+  <img src="/assets/list-component.gif?raw=true" width="80%"/>
+</p>
 
 ------
 
@@ -93,7 +104,9 @@ println("Size: $size")
 val size: String = KInquirer.promptList("What size do you need?", listOf("Large", "Medium", "Small"))
 println("Size: $size")
 ```
-<p align="center"><img src="/assets/list-multi-component.gif?raw=true"/></p>
+<p align="center">
+  <img src="/assets/list-multi-component.gif?raw=true" width="80%"/>
+</p>
 
 ------
 
