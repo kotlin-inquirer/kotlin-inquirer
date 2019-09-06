@@ -124,7 +124,7 @@ println("Size: $size")
 
 #### Operation
 - [ ] Maven Central
-- [ ] JCentral
+- [ ] JCenter
 - [x] GIFs
 - [x] Example
 - [x] Travis-CI
