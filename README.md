@@ -107,13 +107,15 @@ println("Size: $size")
 - [x] List with multi selection
 - [ ] Input validation error message
 - [ ] Support Hint
+- [ ] Better package name
 
 #### Operation
 - [ ] Maven Central
+- [ ] JCentral
 - [x] GIFs
+- [x] Example
 - [x] Travis-CI
 - [ ] codecov 
-- [ ] Icon
-- [ ] Examples
+- [ ] Logo
 
 
