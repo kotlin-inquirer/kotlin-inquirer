@@ -7,8 +7,13 @@
 > A common interactive command line user interfaces written in [![Pure Kotlin](https://img.shields.io/badge/100%25-kotlin-blue.svg)](https://kotlinlang.org/) inspired by [Inquirer.js](https://github.com/SBoudrias/Inquirer.js "Inquirer.js") 
 <p align="center"><img src="/assets/pizza.gif?raw=true"/></p>
 
-## Run Demo
-Run demo using [kscript](https://github.com/holgerbrandl/kscript "kscript"):
+## Run Demo Using [kscript](https://github.com/holgerbrandl/kscript "kscript")
+Remote scriplet [raw-URL](https://raw.githubusercontent.com/YanivGrama/kotlin-inquirer/master/scripts/src/pizza.kts 
+"pizza.kts") 
+```shell script
+kscript https://git.io/fjj2P
+```
+Or clone it
 ```shell script
 git clone https://github.com/YanivGrama/kotlin-inquirer.git
 cd kotlin-inquirer
