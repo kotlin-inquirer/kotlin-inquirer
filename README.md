@@ -1,7 +1,7 @@
-# Kotlin-Inquirer
-
 <h1 align="center">
-    <img src="/assets/kotlin-inquirer-logo.png" width="80%"/>
+    <a href="https://github.com/YanivGrama/kotlin-inquirer/">
+        <img src="/assets/kotlin-inquirer-logo.png" width="40%"/>
+    </a>
 </h1>
 
 [![Build Status](https://travis-ci.org/YanivGrama/kotlin-inquirer.svg?branch=master)](https://travis-ci.org/YanivGrama/kotlin-inquirer)
@@ -133,6 +133,6 @@ println("Size: $size")
 - [x] Example
 - [x] Travis-CI
 - [ ] codecov 
-- [ ] Logo
+- [x] Logo
 
 
