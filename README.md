@@ -1,6 +1,6 @@
 <h1 align="center">
     <a href="https://yanivgrama.github.io/kotlin-inquirer/">
-        <img src="/assets/kotlin-inquirer-logo.png" width="40%"/>
+        <img src="https://github.com/YanivGrama/kotlin-inquirer/edit/master/assets/kotlin-inquirer-logo.png" width="40%"/>
     </a>
 </h1>
 
@@ -11,7 +11,7 @@
 > A common interactive command line user interfaces written in [![Pure Kotlin](https://img.shields.io/badge/100%25-kotlin-blue.svg)](https://kotlinlang.org/) inspired by [Inquirer.js](https://github.com/SBoudrias/Inquirer.js "Inquirer.js") 
 
 <p align="center">
-  <img src="/assets/pizza.gif?raw=true" width="80%"/>
+  <img src="https://github.com/YanivGrama/kotlin-inquirer/edit/master/assets/pizza.gif?raw=true" width="80%"/>
 </p>
 
 ## :rocket: Run Demo Using [kscript](https://github.com/holgerbrandl/kscript "kscript")
@@ -53,7 +53,7 @@ val isDelivery: Boolean = KInquirer.promptConfirm("Is this for delivery?", defau
 println("Is Delivery: $isDelivery")
 ```
 <p align="center">
-  <img src="/assets/confirm-component.gif?raw=true" width="80%"/>
+  <img src="https://github.com/YanivGrama/kotlin-inquirer/edit/master/assets/confirm-component.gif?raw=true" width="80%"/>
 </p>
 
 ------
@@ -64,7 +64,7 @@ val comments: String = KInquirer.promptInput("Any comments on your purchase expe
 println("Comments: $comments")
 ```
 <p align="center">
-  <img src="/assets/input-component.gif?raw=true" width="80%"/>
+  <img src="https://github.com/YanivGrama/kotlin-inquirer/edit/master/assets/input-component.gif?raw=true" width="80%"/>
 </p>
 
 ------
@@ -75,7 +75,7 @@ val quantity: BigDecimal = KInquirer.promptInputNumber("How many do you need?")
 println("Quantity: $quantity")
 ```
 <p align="center">
-  <img src="/assets/input-number-component.gif?raw=true" width="80%"/>
+  <img src="https://github.com/YanivGrama/kotlin-inquirer/edit/master/assets/input-number-component.gif?raw=true" width="80%"/>
 </p>
 
 ------
@@ -86,7 +86,7 @@ val password: String = KInquirer.promptInputPassword("Enter Your Password:", hin
 println("Password: $password")
 ```
 <p align="center">
-  <img src="/assets/input-password-component.gif?raw=true" width="80%"/>
+  <img src="https://github.com/YanivGrama/kotlin-inquirer/edit/master/assets/input-password-component.gif?raw=true" width="80%"/>
 </p>
 
 
@@ -98,7 +98,7 @@ val size: String = KInquirer.promptList("What size do you need?", listOf("Large"
 println("Size: $size")
 ```
 <p align="center">
-  <img src="/assets/list-component.gif?raw=true" width="80%"/>
+  <img src="https://github.com/YanivGrama/kotlin-inquirer/edit/master/assets/list-component.gif?raw=true" width="80%"/>
 </p>
 
 ------
@@ -109,7 +109,7 @@ val size: String = KInquirer.promptList("What size do you need?", listOf("Large"
 println("Size: $size")
 ```
 <p align="center">
-  <img src="/assets/list-multi-component.gif?raw=true" width="80%"/>
+  <img src="https://github.com/YanivGrama/kotlin-inquirer/edit/master/assets/list-multi-component.gif?raw=true" width="80%"/>
 </p>
 
 ------
