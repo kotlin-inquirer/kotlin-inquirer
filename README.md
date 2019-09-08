@@ -18,6 +18,7 @@
 Remote scriplet [raw-URL](https://raw.githubusercontent.com/YanivGrama/kotlin-inquirer/master/scripts/src/pizza.kts 
 "pizza.kts") 
 
+
 ```
 kscript https://git.io/fjj2P
 ```
@@ -29,6 +30,7 @@ git clone https://github.com/YanivGrama/kotlin-inquirer.git
 cd kotlin-inquirer
 kscript ./scripts/src/pizza.kts
 ```
+
 
 ## :cloud: Download
 
