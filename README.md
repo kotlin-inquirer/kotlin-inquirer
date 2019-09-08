@@ -1,5 +1,5 @@
 <h1 align="center">
-    <a href="https://github.com/YanivGrama/kotlin-inquirer/">
+    <a href="https://yanivgrama.github.io/kotlin-inquirer/">
         <img src="/assets/kotlin-inquirer-logo.png" width="40%"/>
     </a>
 </h1>
