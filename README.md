@@ -17,9 +17,11 @@
 ## :rocket: Run Demo Using [kscript](https://github.com/holgerbrandl/kscript "kscript")
 Remote scriplet [raw-URL](https://raw.githubusercontent.com/YanivGrama/kotlin-inquirer/master/scripts/src/pizza.kts 
 "pizza.kts") 
+
 ```shell script
 kscript https://git.io/fjj2P
 ```
+
 Or clone it
 ```shell script
 git clone https://github.com/YanivGrama/kotlin-inquirer.git
