@@ -18,13 +18,13 @@
 Remote scriplet [raw-URL](https://raw.githubusercontent.com/YanivGrama/kotlin-inquirer/master/scripts/src/pizza.kts 
 "pizza.kts") 
 
-```shell script
+```
 kscript https://git.io/fjj2P
 ```
 
 Or clone it
 
-```shell script
+```
 git clone https://github.com/YanivGrama/kotlin-inquirer.git
 cd kotlin-inquirer
 kscript ./scripts/src/pizza.kts
