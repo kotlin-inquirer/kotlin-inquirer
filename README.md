@@ -1,5 +1,9 @@
 # Kotlin-Inquirer
 
+<h1 align="center">
+    <img src="/assets/kotlin-inquirer-logo.png" width="80%"/>
+</h1>
+
 [![Build Status](https://travis-ci.org/YanivGrama/kotlin-inquirer.svg?branch=master)](https://travis-ci.org/YanivGrama/kotlin-inquirer)
 [![Apache License V.2](https://img.shields.io/badge/license-Apache%20V.2-blue.svg)](https://github.com/YanivGrama/kotlin-inquirer/blob/master/LICENSE) 
 [![](https://jitpack.io/v/YanivGrama/kotlin-inquirer.svg)](https://jitpack.io/#YanivGrama/kotlin-inquirer)
