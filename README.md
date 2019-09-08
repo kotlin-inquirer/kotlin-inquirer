@@ -23,6 +23,7 @@ kscript https://git.io/fjj2P
 ```
 
 Or clone it
+
 ```shell script
 git clone https://github.com/YanivGrama/kotlin-inquirer.git
 cd kotlin-inquirer
