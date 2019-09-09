@@ -1,5 +1,5 @@
 @file:MavenRepository("jitpack", "https://jitpack.io")
-@file:DependsOn("com.github.YanivGrama:kotlin-inquirer:v0.0.2-alpha")
+@file:DependsOn("com.github.kotlin-inquirer:kotlin-inquirer:v0.0.2-alpha")
 
 import com.yg.kotlin.inquirer.components.promptListMultiObject
 import com.yg.kotlin.inquirer.components.promptListObject
