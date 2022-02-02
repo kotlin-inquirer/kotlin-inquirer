@@ -36,7 +36,7 @@ internal class InputComponent(
             }
             is KeyPressSpace -> {
                 if (filter(" ")) {
-                    value += " "
+                    value = value?.plus(" ") ?: " "
                 }
             }
             is Character -> {
@@ -58,16 +58,21 @@ internal class InputComponent(
         append(message.toAnsi { bold() })
         append(" ")
 
-        if (value.isNullOrBlank() && hint.isNotBlank()) {
-            // Hint
-            append("  ")
-            append(hint.toAnsi { fgBrightBlack() })
-            append(ansi().cursorLeft(hint.length + 2))
-        } else {
-            // User Input
-            append(transform(value()).toAnsi { fgCyan(); bold(); })
-            if (!interacting) {
-                appendLine()
+        when {
+            interacting && value.isNullOrEmpty() && hint.isNotBlank() -> {
+                // Hint
+                append("  ")
+                append(hint.toAnsi { fgBrightBlack() })
+                append(ansi().cursorLeft(hint.length + 2))
+            }
+            interacting -> {
+                // User Input
+                append(transform(value()).toAnsi { fgCyan(); bold(); })
+                append(ansi().cursorLeft(hint.length + 2))
+            }
+            else -> {
+                // User Input with new line
+                appendLine(transform(value()).toAnsi { fgCyan(); bold(); })
             }
         }
     }
@@ -82,7 +87,6 @@ public fun KInquirer.promptInput(
     filter: (s: String) -> Boolean = { true },
     transform: (s: String) -> String = { it }
 ): String {
-
     return prompt(InputComponent(message, default, hint, validation, filter, transform))
 }
 
