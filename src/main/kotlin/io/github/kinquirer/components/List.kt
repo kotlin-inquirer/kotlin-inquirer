@@ -110,13 +110,13 @@ internal class ListComponent<T>(
 
 private val isOldTerminal: Boolean by lazy { System.getProperty("os.name").contains("win", ignoreCase = true) }
 
-data class ListViewOptions(
+public data class ListViewOptions(
     val questionMarkPrefix: String = "?".toAnsiStr { bold(); fgGreen() },
     val cursor: String = (if (isOldTerminal) " > " else " ❯ ").toAnsiStr { fgBrightCyan() },
     val nonCursor: String = "   ",
 )
 
-fun KInquirer.promptList(
+public fun KInquirer.promptList(
     message: String,
     choices: List<String> = emptyList(),
     hint: String = "",
@@ -132,7 +132,7 @@ fun KInquirer.promptList(
     )
 }
 
-fun <T> KInquirer.promptListObject(
+public fun <T> KInquirer.promptListObject(
     message: String,
     choices: List<Choice<T>> = emptyList(),
     hint: String = "",

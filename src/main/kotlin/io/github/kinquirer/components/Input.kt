@@ -74,7 +74,7 @@ internal class InputComponent(
 }
 
 
-fun KInquirer.promptInput(
+public fun KInquirer.promptInput(
     message: String,
     default: String = "",
     hint: String = "",
@@ -86,7 +86,7 @@ fun KInquirer.promptInput(
     return prompt(InputComponent(message, default, hint, validation, filter, transform))
 }
 
-fun KInquirer.promptInputPassword(
+public fun KInquirer.promptInputPassword(
     message: String,
     default: String = "",
     hint: String = "",
@@ -99,7 +99,7 @@ fun KInquirer.promptInputPassword(
     return prompt(InputComponent(message, default, hint, validation, filter, transform))
 }
 
-fun KInquirer.promptInputNumber(
+public fun KInquirer.promptInputNumber(
     message: String,
     default: String = "",
     hint: String = "",

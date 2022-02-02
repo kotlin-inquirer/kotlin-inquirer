@@ -1,8 +1,8 @@
 package io.github.kinquirer.core
 
-interface Component<T> {
-    fun value(): T
-    fun isInteracting(): Boolean
-    fun onEvent(event: KInquirerEvent)
-    fun render(): String
+public interface Component<T> {
+    public fun value(): T
+    public fun isInteracting(): Boolean
+    public fun onEvent(event: KInquirerEvent)
+    public fun render(): String
 }

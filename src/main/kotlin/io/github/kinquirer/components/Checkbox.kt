@@ -148,7 +148,7 @@ internal class CheckboxComponent<T>(
 
 private val isOldTerminal: Boolean by lazy { System.getProperty("os.name").contains("win", ignoreCase = true) }
 
-data class CheckboxViewOptions(
+public data class CheckboxViewOptions(
     val questionMarkPrefix: String = "?".toAnsiStr { bold(); fgGreen() },
     val cursor: String = (if (isOldTerminal) " > " else " ❯ ").toAnsiStr { fgBrightCyan() },
     val nonCursor: String = if (isOldTerminal) "   " else "   ",
@@ -156,7 +156,7 @@ data class CheckboxViewOptions(
     val unchecked: String = (if (isOldTerminal) "( ) " else "◯ "),
 )
 
-fun KInquirer.promptCheckbox(
+public fun KInquirer.promptCheckbox(
     message: String,
     choices: List<String>,
     hint: String = "",
@@ -176,7 +176,7 @@ fun KInquirer.promptCheckbox(
     )
 }
 
-fun <T> KInquirer.promptCheckboxObject(
+public fun <T> KInquirer.promptCheckboxObject(
     message: String,
     choices: List<Choice<T>>,
     hint: String = "",

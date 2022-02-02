@@ -3,11 +3,10 @@ package io.github.kinquirer.core
 import org.fusesource.jansi.Ansi
 import org.fusesource.jansi.Ansi.ansi
 import org.fusesource.jansi.AnsiConsole
-import kotlin.math.max
 import kotlin.text.Charsets.UTF_8
 
 
-object AnsiOutput {
+internal object AnsiOutput {
     private var prevViewHeight = 0
 
     fun display(view: String) {

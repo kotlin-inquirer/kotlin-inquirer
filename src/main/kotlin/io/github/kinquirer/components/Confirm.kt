@@ -49,7 +49,7 @@ internal class ConfirmComponent(
     }
 }
 
-fun KInquirer.promptConfirm(
+public fun KInquirer.promptConfirm(
     message: String,
     default: Boolean = false
 ): Boolean {

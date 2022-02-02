@@ -4,9 +4,9 @@ import org.jline.terminal.Terminal
 import org.jline.terminal.TerminalBuilder
 import java.io.Reader
 
-object KInquirer {
+public object KInquirer {
 
-    fun <T> prompt(component: Component<T>): T {
+    public fun <T> prompt(component: Component<T>): T {
         runTerminal { reader ->
             val readerHandler = KInquirerReaderHandler.getInstance()
             AnsiOutput.display(component.render())

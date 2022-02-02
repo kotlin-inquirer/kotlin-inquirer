@@ -5,7 +5,7 @@ import java.io.Reader
 
 private val isOldTerminal: Boolean = System.getProperty("os.name").contains("win", ignoreCase = true)
 
-interface KInquirerReaderHandler {
+internal interface KInquirerReaderHandler {
     companion object {
         fun getInstance(): KInquirerReaderHandler = when {
             isOldTerminal -> KInquirerReaderHandlerOldTerminal
@@ -16,7 +16,7 @@ interface KInquirerReaderHandler {
     fun handleInteraction(reader: Reader): KInquirerEvent
 }
 
-object KInquirerReaderHandlerNewTerminal : KInquirerReaderHandler {
+internal object KInquirerReaderHandlerNewTerminal : KInquirerReaderHandler {
 
     override fun handleInteraction(reader: Reader): KInquirerEvent {
         return when (val c = reader.read()) {
@@ -43,7 +43,7 @@ object KInquirerReaderHandlerNewTerminal : KInquirerReaderHandler {
     }
 }
 
-object KInquirerReaderHandlerOldTerminal : KInquirerReaderHandler {
+internal object KInquirerReaderHandlerOldTerminal : KInquirerReaderHandler {
     override fun handleInteraction(reader: Reader): KInquirerEvent {
         return when (val c = reader.read()) {
             8 -> KeyPressBackspace
