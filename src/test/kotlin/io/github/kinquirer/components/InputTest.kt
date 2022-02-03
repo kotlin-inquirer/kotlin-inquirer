@@ -4,6 +4,7 @@ import io.github.kinquirer.core.KInquirerEvent.*
 import io.github.kinquirer.core.toAnsi
 import org.fusesource.jansi.Ansi.ansi
 import org.junit.jupiter.api.Assertions
+import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 
 
@@ -75,7 +76,10 @@ internal class InputTest {
             append(" ")
             append("prompt message".toAnsi { bold() })
             append(" ")
-            append("heo word".toAnsi { fgCyan(); bold(); })
+            append("heo word")
+            append("  ")
+            append("invalid input".toAnsi { bold(); fgRed() })
+            append(ansi().cursorLeft(15))
         }
 
         Assertions.assertEquals(expected, inputPrompt.render())

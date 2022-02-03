@@ -11,7 +11,7 @@
 > A collection of common interactive command line user interfaces written in [![Pure Kotlin](https://img.shields.io/badge/100%25-kotlin-blue.svg)](https://kotlinlang.org/) inspired by [Inquirer.js](https://github.com/SBoudrias/Inquirer.js "Inquirer.js") 
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/kotlin-inquirer/kotlin-inquirer/master/assets/kotlin-pizza.gif?raw=true" width="80%"/>
+  <img src="https://raw.githubusercontent.com/kotlin-inquirer/kotlin-inquirer/new_gifs/assets/pizza.gif?raw=true" width="80%"/>
 </p>
 
 ## :rocket: Run Demo Using [kscript](https://github.com/holgerbrandl/kscript "kscript")
@@ -54,44 +54,44 @@ dependencies {
 #### Confirm
 
 ```kotlin
-val isDelivery: Boolean = KInquirer.promptConfirm("Is this for delivery?", default = false)
+val isDelivery: Boolean = KInquirer.promptConfirm(message = "Is this for delivery?", default = false)
 println("Is Delivery: $isDelivery")
 ```
 <p align="center">
-  <img src="https://raw.githubusercontent.com/kotlin-inquirer/kotlin-inquirer/master/assets/confirm-component.gif?raw=true" width="80%"/>
+  <img src="https://raw.githubusercontent.com/kotlin-inquirer/kotlin-inquirer/new_gifs/assets/confirm.gif?raw=true" width="80%"/>
 </p>
 
 ------
 
 #### Input
 ```kotlin
-val comments: String = KInquirer.promptInput("Any comments on your purchase experience?")
+val comments: String = KInquirer.promptInput(message = "Any comments on your purchase experience?")
 println("Comments: $comments")
 ```
 <p align="center">
-  <img src="https://raw.githubusercontent.com/kotlin-inquirer/kotlin-inquirer/master/assets/input-component.gif?raw=true" width="80%"/>
+  <img src="https://raw.githubusercontent.com/kotlin-inquirer/kotlin-inquirer/new_gifs/assets/input.gif?raw=true" width="80%"/>
 </p>
 
 ------
 
 #### Input Numbers
 ```kotlin
-val quantity: BigDecimal = KInquirer.promptInputNumber("How many do you need?")
+val quantity: BigDecimal = KInquirer.promptInputNumber(message = "How many do you need?")
 println("Quantity: $quantity")
 ```
 <p align="center">
-  <img src="https://raw.githubusercontent.com/kotlin-inquirer/kotlin-inquirer/master/assets/input-number-component.gif?raw=true" width="80%"/>
+  <img src="https://raw.githubusercontent.com/kotlin-inquirer/kotlin-inquirer/new_gifs/assets/input_numbers.gif?raw=true" width="80%"/>
 </p>
 
 ------
 
 #### Input Password
 ```kotlin
-val password: String = KInquirer.promptInputPassword("Enter Your Password:", hint = "password")
+val password: String = KInquirer.promptInputPassword(message = "Enter Your Password:", hint = "password")
 println("Password: $password")
 ```
 <p align="center">
-  <img src="https://raw.githubusercontent.com/kotlin-inquirer/kotlin-inquirer/master/assets/input-password-component.gif?raw=true" width="80%"/>
+  <img src="https://raw.githubusercontent.com/kotlin-inquirer/kotlin-inquirer/new_gifs/assets/input_password.gif?raw=true" width="80%"/>
 </p>
 
 
@@ -99,22 +99,29 @@ println("Password: $password")
 
 #### List
 ```kotlin
-val size: String = KInquirer.promptList("What size do you need?", listOf("Large", "Medium", "Small"))
+val size: String = KInquirer.promptList(message = "What size do you need?", choices = listOf("Large", "Medium", "Small"))
 println("Size: $size")
 ```
 <p align="center">
-  <img src="https://raw.githubusercontent.com/kotlin-inquirer/kotlin-inquirer/master/assets/list-component.gif?raw=true" width="80%"/>
+  <img src="https://raw.githubusercontent.com/kotlin-inquirer/kotlin-inquirer/new_gifs/assets/list.gif?raw=true" width="80%"/>
 </p>
 
 ------
 
-#### List Multi Selection
+#### Checkbox
 ```kotlin
-val size: String = KInquirer.promptList("What size do you need?", listOf("Large", "Medium", "Small"))
-println("Size: $size")
+val toppings: List<String> = KInquirer.promptCheckbox(
+    message = "What about the toppings?",
+    choices = listOf(
+        "Pepperoni and cheese",
+        "All dressed",
+        "Hawaiian",
+    ),
+)
+println("Toppings: $toppings")
 ```
 <p align="center">
-  <img src="https://raw.githubusercontent.com/kotlin-inquirer/kotlin-inquirer/master/assets/list-multi-component.gif?raw=true" width="80%"/>
+  <img src="https://raw.githubusercontent.com/kotlin-inquirer/kotlin-inquirer/new_gifs/assets/checkbox.gif?raw=true" width="80%"/>
 </p>
 
 ------
@@ -126,18 +133,15 @@ println("Size: $size")
 - [x] Input Numbers
 - [x] Input Password
 - [x] List
-- [x] List with multi selection
-- [ ] Input validation error message
-- [ ] Support Hint
-- [ ] Better package name
+- [x] Checkbox
+- [x] Input validation error message
+- [x] Support Hint
+- [x] Better package name
 
 #### Operation
-- [ ] Maven Central
-- [ ] JCenter
-- [x] GIFs
-- [x] Example
+- [x] Examples
 - [x] Travis-CI
-- [ ] codecov 
 - [x] Logo
-
-
+- [ ] GIFs
+- [ ] Maven Central
+- [ ] codecov 
