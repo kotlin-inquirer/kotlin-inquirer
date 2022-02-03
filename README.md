@@ -54,7 +54,7 @@ dependencies {
 #### Confirm
 
 ```kotlin
-val isDelivery: Boolean = KInquirer.promptConfirm("Is this for delivery?", default = false)
+val isDelivery: Boolean = KInquirer.promptConfirm(message = "Is this for delivery?", default = false)
 println("Is Delivery: $isDelivery")
 ```
 <p align="center">
@@ -65,7 +65,7 @@ println("Is Delivery: $isDelivery")
 
 #### Input
 ```kotlin
-val comments: String = KInquirer.promptInput("Any comments on your purchase experience?")
+val comments: String = KInquirer.promptInput(message = "Any comments on your purchase experience?")
 println("Comments: $comments")
 ```
 <p align="center">
@@ -76,7 +76,7 @@ println("Comments: $comments")
 
 #### Input Numbers
 ```kotlin
-val quantity: BigDecimal = KInquirer.promptInputNumber("How many do you need?")
+val quantity: BigDecimal = KInquirer.promptInputNumber(message = "How many do you need?")
 println("Quantity: $quantity")
 ```
 <p align="center">
@@ -87,7 +87,7 @@ println("Quantity: $quantity")
 
 #### Input Password
 ```kotlin
-val password: String = KInquirer.promptInputPassword("Enter Your Password:", hint = "password")
+val password: String = KInquirer.promptInputPassword(message = "Enter Your Password:", hint = "password")
 println("Password: $password")
 ```
 <p align="center">
@@ -99,7 +99,7 @@ println("Password: $password")
 
 #### List
 ```kotlin
-val size: String = KInquirer.promptList("What size do you need?", listOf("Large", "Medium", "Small"))
+val size: String = KInquirer.promptList(message = "What size do you need?", choices = listOf("Large", "Medium", "Small"))
 println("Size: $size")
 ```
 <p align="center">
@@ -108,10 +108,17 @@ println("Size: $size")
 
 ------
 
-#### List Multi Selection
+#### Checkbox
 ```kotlin
-val size: String = KInquirer.promptList("What size do you need?", listOf("Large", "Medium", "Small"))
-println("Size: $size")
+val toppings: List<String> = KInquirer.promptCheckbox(
+    message = "What about the toppings?",
+    choices = listOf(
+        "Pepperoni and cheese",
+        "All dressed",
+        "Hawaiian",
+    ),
+)
+println("Toppings: $toppings")
 ```
 <p align="center">
   <img src="https://raw.githubusercontent.com/kotlin-inquirer/kotlin-inquirer/master/assets/list-multi-component.gif?raw=true" width="80%"/>
@@ -132,10 +139,10 @@ println("Size: $size")
 - [x] Better package name
 
 #### Operation
-- [x] GIFs
-- [x] Example
+- [x] Examples
 - [x] Travis-CI
 - [x] Logo
+- [ ] GIFs
 - [ ] Maven Central
 - [ ] codecov 
 
