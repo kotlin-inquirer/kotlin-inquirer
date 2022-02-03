@@ -45,7 +45,7 @@ allprojects {
 
 ```groovy
 dependencies {
-  implementation 'com.github.kotlin-inquirer:kotlin-inquirer:v0.0.2-alpha'
+  implementation 'com.github.kotlin-inquirer:kotlin-inquirer:0.1.0'
 }
 ```
 
