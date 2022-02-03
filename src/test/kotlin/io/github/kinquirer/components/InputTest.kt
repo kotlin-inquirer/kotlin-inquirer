@@ -75,7 +75,7 @@ internal class InputTest {
             append(" ")
             append("prompt message".toAnsi { bold() })
             append(" ")
-            append("heo word".toAnsi { fgCyan(); bold(); })
+            append("heo word")
         }
 
         Assertions.assertEquals(expected, inputPrompt.render())

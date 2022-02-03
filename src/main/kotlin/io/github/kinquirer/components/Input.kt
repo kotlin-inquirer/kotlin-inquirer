@@ -67,7 +67,7 @@ internal class InputComponent(
             }
             interacting -> {
                 // User Input
-                append(transform(value()).toAnsi { fgCyan(); bold(); })
+                append(transform(value()))
             }
             else -> {
                 // User Input with new line
