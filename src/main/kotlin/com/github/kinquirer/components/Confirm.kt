@@ -1,7 +1,7 @@
 package com.github.kinquirer.components
 
 import com.github.kinquirer.core.Component
-import com.github.kinquirer.core.KInquirer
+import com.github.kinquirer.KInquirer
 import com.github.kinquirer.core.KInquirerEvent
 import com.github.kinquirer.core.toAnsi
 

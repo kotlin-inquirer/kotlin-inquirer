@@ -1,5 +1,5 @@
 import com.github.kinquirer.components.*
-import com.github.kinquirer.core.KInquirer
+import com.github.kinquirer.KInquirer
 import java.math.BigDecimal
 
 fun main() {

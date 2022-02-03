@@ -3,7 +3,7 @@ TODO List
 (x) [input component] change color when typing to white instead of cyan
 ( ) [code example] update script
 ( ) [README] update script link
-( ) [README] update examples
-( ) [README] update gifs
-( ) [github] release v0.1
+(x) [README] update examples
+(x) [README] update gifs
+(x) [github] release v0.1.0
 ( ) [github] close issues

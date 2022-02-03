@@ -4,8 +4,8 @@ plugins {
 }
 
 description = "kotlin-inquirer"
-group = "io.github.kotlin-inquirer"
-version = 1.00
+group = "com.github.kotlin-inquirer"
+version = "0.1.0"
 
 repositories {
     mavenCentral()

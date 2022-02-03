@@ -1,5 +1,8 @@
-package com.github.kinquirer.core
+package com.github.kinquirer
 
+import com.github.kinquirer.core.AnsiOutput
+import com.github.kinquirer.core.Component
+import com.github.kinquirer.core.KInquirerReaderHandler
 import org.jline.terminal.Terminal
 import org.jline.terminal.TerminalBuilder
 import java.io.Reader
