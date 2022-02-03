@@ -4,7 +4,7 @@
     </a>
 </h1>
 
-[![Build Status](https://travis-ci.com/kotlin-inquirer/kotlin-inquirer.svg?branch=master)](https://travis-ci.org/kotlin-inquirer/kotlin-inquirer)
+![example workflow](https://github.com/kotlin-inquirer/kotlin-inquirer/actions/workflows/gradle.yml/badge.svg)
 [![Apache License V.2](https://img.shields.io/badge/license-Apache%20V.2-blue.svg)](https://github.com/kotlin-inquirer/kotlin-inquirer/blob/master/LICENSE) 
 [![](https://jitpack.io/v/kotlin-inquirer/kotlin-inquirer.svg)](https://jitpack.io/#kotlin-inquirer/kotlin-inquirer)
 
@@ -140,7 +140,6 @@ println("Toppings: $toppings")
 
 #### Operation
 - [x] Examples
-- [x] Travis-CI
 - [x] Logo
 - [ ] GIFs
 - [ ] Maven Central
