@@ -15,12 +15,17 @@
 </p>
 
 ## :rocket: Run Demo Using [kscript](https://github.com/holgerbrandl/kscript "kscript")
-Remote scriplet [raw-URL](https://raw.githubusercontent.com/kotlin-inquirer/kotlin-inquirer/master/scripts/src/pizza.kts 
+Remote scriplet [raw-URL](https://raw.githubusercontent.com/kotlin-inquirer/kotlin-inquirer/master/scripts/pizza.kts 
 "pizza.kts") 
 
 
 ```
-kscript https://git.io/fjj2P
+kscript https://raw.githubusercontent.com/kotlin-inquirer/kotlin-inquirer/master/scripts/pizza.kts
+```
+Or using URL Shortener
+
+```
+kscript https://bit.ly/kotlin-inquirer-pizza
 ```
 
 Or clone it
@@ -28,7 +33,7 @@ Or clone it
 ```
 git clone https://github.com/kotlin-inquirer/kotlin-inquirer.git
 cd kotlin-inquirer
-kscript ./scripts/src/pizza.kts
+kscript ./scripts/pizza.kts
 ```
 
 
