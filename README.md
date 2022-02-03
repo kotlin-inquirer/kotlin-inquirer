@@ -145,5 +145,3 @@ println("Toppings: $toppings")
 - [ ] GIFs
 - [ ] Maven Central
 - [ ] codecov 
-
-
