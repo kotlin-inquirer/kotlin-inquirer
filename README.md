@@ -4,7 +4,7 @@
     </a>
 </h1>
 
-![example workflow](https://github.com/kotlin-inquirer/kotlin-inquirer/actions/workflows/gradle.yml/badge.svg)
+[![example workflow](https://github.com/kotlin-inquirer/kotlin-inquirer/actions/workflows/gradle.yml/badge.svg)](https://github.com/kotlin-inquirer/kotlin-inquirer/actions/workflows/gradle.yml)
 [![Apache License V.2](https://img.shields.io/badge/license-Apache%20V.2-blue.svg)](https://github.com/kotlin-inquirer/kotlin-inquirer/blob/master/LICENSE) 
 [![](https://jitpack.io/v/kotlin-inquirer/kotlin-inquirer.svg)](https://jitpack.io/#kotlin-inquirer/kotlin-inquirer)
 
