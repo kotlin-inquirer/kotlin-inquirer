@@ -1,6 +1,6 @@
 plugins {
+    java
     kotlin("jvm") version "1.6.10"
-    `java-library`
     `maven-publish`
 }
 
@@ -10,6 +10,15 @@ version = "0.1.0"
 
 repositories {
     mavenCentral()
+}
+
+tasks {
+    compileKotlin {
+        kotlinOptions.jvmTarget = "1.8"
+    }
+    compileTestKotlin {
+        kotlinOptions.jvmTarget = "1.8"
+    }
 }
 
 dependencies {
@@ -24,5 +33,18 @@ kotlin {
 
 tasks.test {
     useJUnitPlatform()
+}
+
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = "com.github.kotlin-inquirer"
+            artifactId = "kotlin-inquirer"
+            version = "0.1.0"
+
+            from(components["java"])
+        }
+    }
 }
 
