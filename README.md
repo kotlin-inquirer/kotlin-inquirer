@@ -11,7 +11,7 @@
 > A collection of common interactive command line user interfaces written in [![Pure Kotlin](https://img.shields.io/badge/100%25-kotlin-blue.svg)](https://kotlinlang.org/) inspired by [Inquirer.js](https://github.com/SBoudrias/Inquirer.js "Inquirer.js") 
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/kotlin-inquirer/kotlin-inquirer/master/assets/pizza.gif?raw=true" width="80%"/>
+  <img src="https://raw.githubusercontent.com/kotlin-inquirer/kotlin-inquirer/master/assets/kotlin-pizza.gif?raw=true" width="80%"/>
 </p>
 
 ## :rocket: Run Demo Using [kscript](https://github.com/holgerbrandl/kscript "kscript")
