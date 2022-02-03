@@ -126,18 +126,17 @@ println("Size: $size")
 - [x] Input Numbers
 - [x] Input Password
 - [x] List
-- [x] List with multi selection
-- [ ] Input validation error message
-- [ ] Support Hint
-- [ ] Better package name
+- [x] Checkbox
+- [x] Input validation error message
+- [x] Support Hint
+- [x] Better package name
 
 #### Operation
-- [ ] Maven Central
-- [ ] JCenter
 - [x] GIFs
 - [x] Example
 - [x] Travis-CI
-- [ ] codecov 
 - [x] Logo
+- [ ] Maven Central
+- [ ] codecov 
 
 

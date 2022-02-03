@@ -19,16 +19,20 @@ internal class InputComponent(
 ) : Component<String> {
     private var value: String? = null
     private var interacting = true
+    private var errorMessage = ""
 
     override fun value(): String = value ?: default
 
     override fun isInteracting(): Boolean = interacting
 
     override fun onEvent(event: KInquirerEvent) {
+        errorMessage = ""
         when (event) {
             is KeyPressEnter -> {
                 if (validation(value())) {
                     interacting = false
+                } else {
+                    errorMessage = "invalid input"
                 }
             }
             is KeyPressBackspace -> {
@@ -68,6 +72,12 @@ internal class InputComponent(
             interacting -> {
                 // User Input
                 append(transform(value()))
+                // Error message
+                if (errorMessage.isNotBlank()) {
+                    append("  ")
+                    append(errorMessage.toAnsi { bold(); fgRed() })
+                    append(ansi().cursorLeft(errorMessage.length + 2))
+                }
             }
             else -> {
                 // User Input with new line
