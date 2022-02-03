@@ -11,7 +11,7 @@
 > A collection of common interactive command line user interfaces written in [![Pure Kotlin](https://img.shields.io/badge/100%25-kotlin-blue.svg)](https://kotlinlang.org/) inspired by [Inquirer.js](https://github.com/SBoudrias/Inquirer.js "Inquirer.js") 
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/kotlin-inquirer/kotlin-inquirer/new_gifs/assets/pizza.gif?raw=true" width="80%"/>
+  <img src="https://raw.githubusercontent.com/kotlin-inquirer/kotlin-inquirer/master/assets/pizza.gif?raw=true" width="80%"/>
 </p>
 
 ## :rocket: Run Demo Using [kscript](https://github.com/holgerbrandl/kscript "kscript")
@@ -58,7 +58,7 @@ val isDelivery: Boolean = KInquirer.promptConfirm(message = "Is this for deliver
 println("Is Delivery: $isDelivery")
 ```
 <p align="center">
-  <img src="https://raw.githubusercontent.com/kotlin-inquirer/kotlin-inquirer/new_gifs/assets/confirm.gif?raw=true" width="80%"/>
+  <img src="https://raw.githubusercontent.com/kotlin-inquirer/kotlin-inquirer/master/assets/confirm.gif?raw=true" width="80%"/>
 </p>
 
 ------
@@ -69,7 +69,7 @@ val comments: String = KInquirer.promptInput(message = "Any comments on your pur
 println("Comments: $comments")
 ```
 <p align="center">
-  <img src="https://raw.githubusercontent.com/kotlin-inquirer/kotlin-inquirer/new_gifs/assets/input.gif?raw=true" width="80%"/>
+  <img src="https://raw.githubusercontent.com/kotlin-inquirer/kotlin-inquirer/master/assets/input.gif?raw=true" width="80%"/>
 </p>
 
 ------
@@ -80,7 +80,7 @@ val quantity: BigDecimal = KInquirer.promptInputNumber(message = "How many do yo
 println("Quantity: $quantity")
 ```
 <p align="center">
-  <img src="https://raw.githubusercontent.com/kotlin-inquirer/kotlin-inquirer/new_gifs/assets/input_numbers.gif?raw=true" width="80%"/>
+  <img src="https://raw.githubusercontent.com/kotlin-inquirer/kotlin-inquirer/master/assets/input_numbers.gif?raw=true" width="80%"/>
 </p>
 
 ------
@@ -91,7 +91,7 @@ val password: String = KInquirer.promptInputPassword(message = "Enter Your Passw
 println("Password: $password")
 ```
 <p align="center">
-  <img src="https://raw.githubusercontent.com/kotlin-inquirer/kotlin-inquirer/new_gifs/assets/input_password.gif?raw=true" width="80%"/>
+  <img src="https://raw.githubusercontent.com/kotlin-inquirer/kotlin-inquirer/master/assets/input_password.gif?raw=true" width="80%"/>
 </p>
 
 
@@ -103,7 +103,7 @@ val size: String = KInquirer.promptList(message = "What size do you need?", choi
 println("Size: $size")
 ```
 <p align="center">
-  <img src="https://raw.githubusercontent.com/kotlin-inquirer/kotlin-inquirer/new_gifs/assets/list.gif?raw=true" width="80%"/>
+  <img src="https://raw.githubusercontent.com/kotlin-inquirer/kotlin-inquirer/master/assets/list.gif?raw=true" width="80%"/>
 </p>
 
 ------
@@ -121,7 +121,7 @@ val toppings: List<String> = KInquirer.promptCheckbox(
 println("Toppings: $toppings")
 ```
 <p align="center">
-  <img src="https://raw.githubusercontent.com/kotlin-inquirer/kotlin-inquirer/new_gifs/assets/checkbox.gif?raw=true" width="80%"/>
+  <img src="https://raw.githubusercontent.com/kotlin-inquirer/kotlin-inquirer/master/assets/checkbox.gif?raw=true" width="80%"/>
 </p>
 
 ------
