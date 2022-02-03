@@ -1,4 +1,4 @@
-package io.github.kinquirer.core
+package com.github.kinquirer.core
 
 public interface Component<T> {
     public fun value(): T

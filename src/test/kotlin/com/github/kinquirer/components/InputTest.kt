@@ -1,7 +1,7 @@
-package io.github.kinquirer.components
+package com.github.kinquirer.components
 
-import io.github.kinquirer.core.KInquirerEvent.*
-import io.github.kinquirer.core.toAnsi
+import com.github.kinquirer.core.KInquirerEvent.*
+import com.github.kinquirer.core.toAnsi
 import org.fusesource.jansi.Ansi.ansi
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Disabled

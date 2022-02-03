@@ -1,9 +1,9 @@
-package io.github.kinquirer.components
+package com.github.kinquirer.components
 
-import io.github.kinquirer.core.Choice
-import io.github.kinquirer.core.KInquirerEvent.*
-import io.github.kinquirer.core.toAnsi
-import io.github.kinquirer.core.toAnsiStr
+import com.github.kinquirer.core.Choice
+import com.github.kinquirer.core.KInquirerEvent.*
+import com.github.kinquirer.core.toAnsi
+import com.github.kinquirer.core.toAnsiStr
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 

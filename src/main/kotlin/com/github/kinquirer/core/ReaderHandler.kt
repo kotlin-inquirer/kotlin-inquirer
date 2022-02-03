@@ -1,6 +1,6 @@
-package io.github.kinquirer.core
+package com.github.kinquirer.core
 
-import io.github.kinquirer.core.KInquirerEvent.*
+import com.github.kinquirer.core.KInquirerEvent.*
 import java.io.Reader
 
 private val isOldTerminal: Boolean = System.getProperty("os.name").contains("win", ignoreCase = true)

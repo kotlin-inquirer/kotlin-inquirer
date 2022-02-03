@@ -1,7 +1,9 @@
-package io.github.kinquirer.components
+package com.github.kinquirer.components
 
-import io.github.kinquirer.core.*
-import io.github.kinquirer.core.KInquirerEvent.*
+import com.github.kinquirer.core.*
+import com.github.kinquirer.core.KInquirerEvent.*
+import com.github.kinquirer.core.toAnsi
+import com.github.kinquirer.core.toAnsiStr
 import kotlin.math.max
 import kotlin.math.min
 

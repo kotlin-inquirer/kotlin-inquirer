@@ -39,5 +39,6 @@ tasks {
 
 application {
     mainClass.set("PizzaKt")
+//    mainClass.set("UsagesKt")
 }
 

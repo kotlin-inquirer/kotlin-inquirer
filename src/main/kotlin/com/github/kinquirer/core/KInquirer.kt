@@ -1,4 +1,4 @@
-package io.github.kinquirer.core
+package com.github.kinquirer.core
 
 import org.jline.terminal.Terminal
 import org.jline.terminal.TerminalBuilder

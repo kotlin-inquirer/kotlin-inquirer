@@ -1,4 +1,4 @@
-package io.github.kinquirer.core
+package com.github.kinquirer.core
 
 public data class Choice<T>(
     val displayName: String,

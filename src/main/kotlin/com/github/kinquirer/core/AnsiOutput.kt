@@ -1,4 +1,4 @@
-package io.github.kinquirer.core
+package com.github.kinquirer.core
 
 import org.fusesource.jansi.Ansi
 import org.fusesource.jansi.Ansi.ansi

@@ -1,6 +1,6 @@
-import io.github.kinquirer.components.*
-import io.github.kinquirer.core.Choice
-import io.github.kinquirer.core.KInquirer
+import com.github.kinquirer.components.*
+import com.github.kinquirer.core.Choice
+import com.github.kinquirer.core.KInquirer
 import java.math.BigDecimal
 
 data class PizzaOrder(

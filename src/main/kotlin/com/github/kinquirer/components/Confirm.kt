@@ -1,9 +1,9 @@
-package io.github.kinquirer.components
+package com.github.kinquirer.components
 
-import io.github.kinquirer.core.Component
-import io.github.kinquirer.core.KInquirer
-import io.github.kinquirer.core.KInquirerEvent
-import io.github.kinquirer.core.toAnsi
+import com.github.kinquirer.core.Component
+import com.github.kinquirer.core.KInquirer
+import com.github.kinquirer.core.KInquirerEvent
+import com.github.kinquirer.core.toAnsi
 
 internal class ConfirmComponent(
     private val message: String,
