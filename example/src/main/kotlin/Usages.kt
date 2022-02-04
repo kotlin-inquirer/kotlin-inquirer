@@ -51,8 +51,6 @@ fun main() {
             cursor = " 😎 ",
             nonCursor = "    ",
         )
-
-
     )
     println("Continent: $continent")
 
