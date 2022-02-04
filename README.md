@@ -93,6 +93,20 @@ println("Password: $password")
   <img src="https://raw.githubusercontent.com/kotlin-inquirer/kotlin-inquirer/master/assets/input_password.gif?raw=true" width="80%"/>
 </p>
 
+------
+
+#### Input Password custom mask
+```kotlin
+val passwordMasked: String = KInquirer.promptInputPassword(
+    message = "Enter Your Password:",
+    hint = "password",
+    mask = "🤫"
+)
+println("Password: $passwordMasked")
+```
+<p align="center">
+  <img src="https://raw.githubusercontent.com/kotlin-inquirer/kotlin-inquirer/master/assets/input_password_masked.gif?raw=true" width="80%"/>
+</p>
 
 ------
 
@@ -103,6 +117,35 @@ println("Size: $size")
 ```
 <p align="center">
   <img src="https://raw.githubusercontent.com/kotlin-inquirer/kotlin-inquirer/master/assets/list.gif?raw=true" width="80%"/>
+</p>
+
+------
+
+#### List with more options
+```kotlin
+val continent: String = KInquirer.promptList(
+    message = "Select a continent:",
+    choices = listOf(
+        "Asia",
+        "Africa",
+        "Europe",
+        "North America",
+        "South America",
+        "Australia",
+        "Antarctica",
+    ),
+    hint = "press Enter to pick",
+    pageSize = 3,
+    viewOptions = ListViewOptions(
+        questionMarkPrefix = "🌍",
+        cursor = " 😎 ",
+        nonCursor = "    ",
+    )
+)
+println("Continent: $continent")
+```
+<p align="center">
+  <img src="https://raw.githubusercontent.com/kotlin-inquirer/kotlin-inquirer/master/assets/list_view_options.gif?raw=true" width="80%"/>
 </p>
 
 ------
@@ -125,6 +168,38 @@ println("Toppings: $toppings")
 
 ------
 
+#### Checkbox with more options
+```kotlin
+val colors: List<String> = KInquirer.promptCheckbox(
+    message = "Which colors do you prefer?",
+    choices = listOf(
+        "Red",
+        "Green",
+        "Blue",
+        "Yellow",
+        "Black",
+        "White",
+    ),
+    hint = "pick a color using spacebar",
+    maxNumOfSelection = 3,
+    minNumOfSelection = 2,
+    pageSize = 3,
+    viewOptions = CheckboxViewOptions(
+        questionMarkPrefix = "❓",
+        cursor = " 👉 ",
+        nonCursor = "    ",
+        checked = "✅ ",
+        unchecked = "○ ",
+    )
+)
+println("Colors: $colors")
+```
+<p align="center">
+  <img src="https://raw.githubusercontent.com/kotlin-inquirer/kotlin-inquirer/master/assets/checkbox_view_options.gif?raw=true" width="80%"/>
+</p>
+
+------
+
 ### :crystal_ball: Roadmap
 #### Components
 - [x] Confirm
@@ -136,7 +211,7 @@ println("Toppings: $toppings")
 - [x] Input validation error message
 - [x] Support Hint
 - [x] Better package name
-- [ ] Add examples for `ViewOption`
+- [x] Add examples for `ViewOption`
 - [ ] Support List/Checkbox autocomplete
 
 #### Operation
