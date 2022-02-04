@@ -18,12 +18,6 @@
 Remote scriplet [raw-URL](https://raw.githubusercontent.com/kotlin-inquirer/kotlin-inquirer/master/scripts/pizza.kts 
 "pizza.kts") 
 
-
-```
-kscript https://raw.githubusercontent.com/kotlin-inquirer/kotlin-inquirer/master/scripts/pizza.kts
-```
-Or using URL Shortener
-
 ```
 kscript https://bit.ly/kotlin-inquirer-pizza
 ```
