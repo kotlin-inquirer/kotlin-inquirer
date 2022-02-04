@@ -142,10 +142,11 @@ println("Toppings: $toppings")
 - [x] Input validation error message
 - [x] Support Hint
 - [x] Better package name
+- [ ] suport List/Checkbox autocomplete
 
 #### Operation
 - [x] Examples
 - [x] Logo
-- [ ] GIFs
+- [x] GIFs
 - [ ] Maven Central
 - [ ] codecov 
