@@ -16,7 +16,9 @@ jobs:
       - name: Validate Gradle wrapper
       - run: ./gradlew clean build --stacktrace
       - run: ./gradlew codeCoverageReport
+
       - uses: codecov/codecov-action@v2
+      - name: Codecov
         with:
           token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
           files: ./build/reports/jacoco/report.xml
