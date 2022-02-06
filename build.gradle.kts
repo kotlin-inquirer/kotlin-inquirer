@@ -2,6 +2,7 @@ plugins {
     java
     kotlin("jvm") version "1.6.10"
     `maven-publish`
+    jacoco
 }
 
 description = "kotlin-inquirer"
@@ -12,14 +13,6 @@ repositories {
     mavenCentral()
 }
 
-tasks {
-    compileKotlin {
-        kotlinOptions.jvmTarget = "1.8"
-    }
-    compileTestKotlin {
-        kotlinOptions.jvmTarget = "1.8"
-    }
-}
 
 dependencies {
     implementation(kotlin("stdlib"))
@@ -27,14 +20,41 @@ dependencies {
     implementation("org.fusesource.jansi:jansi:2.4.0")
     testImplementation(kotlin("test"))
 }
+
 kotlin {
     explicitApi()
 }
 
-tasks.test {
-    useJUnitPlatform()
-}
+tasks {
+    compileKotlin {
+        kotlinOptions.jvmTarget = "1.8"
+    }
+    compileTestKotlin {
+        kotlinOptions.jvmTarget = "1.8"
+    }
+    test {
+        useJUnitPlatform()
+    }
+    register<JacocoReport>("codeCoverageReport") {
+        dependsOn(test)
 
+        executionData.setFrom(fileTree(project.rootDir.absolutePath) {
+            include("**/build/jacoco/*.exec")
+        })
+
+        reports {
+            xml.required.set(true)
+            xml.outputLocation.set(file("$buildDir/reports/jacoco/report.xml"))
+            html.required.set(false)
+            csv.required.set(false)
+        }
+
+        subprojects {
+            sourceSets(sourceSets.main.get())
+        }
+    }
+
+}
 
 publishing {
     publications {
@@ -47,4 +67,3 @@ publishing {
         }
     }
 }
-
