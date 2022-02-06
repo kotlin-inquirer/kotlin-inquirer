@@ -13,7 +13,6 @@ repositories {
     mavenCentral()
 }
 
-
 dependencies {
     implementation(kotlin("stdlib"))
     implementation("org.jline:jline:3.21.0")
@@ -32,9 +31,11 @@ tasks {
     compileTestKotlin {
         kotlinOptions.jvmTarget = "1.8"
     }
+
     test {
         useJUnitPlatform()
     }
+
     register<JacocoReport>("codeCoverageReport") {
         dependsOn(test)
 
@@ -49,11 +50,8 @@ tasks {
             csv.required.set(false)
         }
 
-        subprojects {
-            sourceSets(sourceSets.main.get())
-        }
+        sourceSets(sourceSets.main.get())
     }
-
 }
 
 publishing {
