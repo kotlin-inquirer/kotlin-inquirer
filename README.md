@@ -7,6 +7,7 @@
 [![example workflow](https://github.com/kotlin-inquirer/kotlin-inquirer/actions/workflows/gradle.yml/badge.svg)](https://github.com/kotlin-inquirer/kotlin-inquirer/actions/workflows/gradle.yml)
 [![Apache License V.2](https://img.shields.io/badge/license-Apache%20V.2-blue.svg)](https://github.com/kotlin-inquirer/kotlin-inquirer/blob/master/LICENSE) 
 [![](https://jitpack.io/v/kotlin-inquirer/kotlin-inquirer.svg)](https://jitpack.io/#kotlin-inquirer/kotlin-inquirer)
+[![codecov](https://codecov.io/gh/kotlin-inquirer/kotlin-inquirer/branch/master/graph/badge.svg?token=S4v5ziYYpA)](https://codecov.io/gh/kotlin-inquirer/kotlin-inquirer)
 
 > A collection of common interactive command line user interfaces written in [![Pure Kotlin](https://img.shields.io/badge/100%25-kotlin-blue.svg)](https://kotlinlang.org/) inspired by [Inquirer.js](https://github.com/SBoudrias/Inquirer.js "Inquirer.js") 
 
