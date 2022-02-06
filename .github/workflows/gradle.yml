@@ -1,6 +1,6 @@
 name: Java CI
 
-on: [ push ]
+on: [push]
 
 jobs:
   build:
@@ -13,13 +13,7 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
-      - name: Validate Gradle wrapper
-      - run: ./gradlew clean build codeCoverageReport --stacktrace
-
+      - name: Build with Gradle
+        run: ./gradlew clean build codeCoverageReport --stacktrace
       - name: Codecov
         uses: codecov/codecov-action@v2.1.0
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
-          files: ./build/reports/jacoco/report.xml
-          verbose: true
-          fail_ci_if_error: true
