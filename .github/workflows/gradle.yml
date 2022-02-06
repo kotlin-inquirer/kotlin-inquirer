@@ -14,10 +14,9 @@ jobs:
         with:
           java-version: 1.8
       - name: Validate Gradle wrapper
-      - run: ./gradlew clean build --stacktrace
-      - run: ./gradlew codeCoverageReport
+      - run: ./gradlew clean build codeCoverageReport --stacktrace
 
-      - uses: codecov/codecov-action@v2
+      - uses: codecov/codecov-action@v2.1.0
       - name: Codecov
         with:
           token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
