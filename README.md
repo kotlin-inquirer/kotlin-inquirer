@@ -219,5 +219,6 @@ println("Colors: $colors")
 - [x] Examples
 - [x] Logo
 - [x] GIFs
+- [x] codecov
 - [ ] Maven Central
-- [ ] codecov 
+ 
