@@ -19,7 +19,6 @@ fun main() {
     val phoneNumber: String = KInquirer.promptInput(
         message = "What's your phone number?",
         filter = { s -> s.matches("\\d+".toRegex()) },
-        validation = { s -> s.length == 10 },
     )
     val size: String = KInquirer.promptList("What size do you need?", listOf("Large", "Medium", "Small"))
     val quantity: BigDecimal = KInquirer.promptInputNumber("How many do you need?")

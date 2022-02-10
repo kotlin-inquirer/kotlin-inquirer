@@ -31,6 +31,13 @@ git clone https://github.com/kotlin-inquirer/kotlin-inquirer.git
 cd kotlin-inquirer
 kscript ./scripts/pizza.kts
 ```
+Or without kscript
+
+```
+./gradlew shadowJar
+java -jar example/build/libs/kotlin-pizza.jar
+```
+
 
 
 ## :cloud: Download
