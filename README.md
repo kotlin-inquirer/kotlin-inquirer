@@ -224,6 +224,7 @@ println("Colors: $colors")
 - [ ] Support List/Checkbox Fuzzy search
 - [ ] Support List/Checkbox autocomplete
 - [ ] Add DSL support
+- [ ] Consider non static function for prompts
 
 
 #### Operation
