@@ -3,7 +3,7 @@ package com.github.kinquirer.core
 import com.github.kinquirer.core.KInquirerEvent.*
 import java.io.Reader
 
-private val isOldTerminal: Boolean = System.getProperty("os.name").contains("win", ignoreCase = true)
+internal val isOldTerminal: Boolean = System.getProperty("os.name").contains("win", ignoreCase = true)
 
 internal interface KInquirerReaderHandler {
     companion object {

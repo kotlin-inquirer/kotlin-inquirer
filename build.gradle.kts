@@ -17,6 +17,8 @@ dependencies {
     implementation(kotlin("stdlib"))
     implementation("org.jline:jline:3.21.0")
     implementation("org.fusesource.jansi:jansi:2.4.0")
+    implementation("net.java.dev.jna:jna:5.11.0")
+    implementation("net.java.dev.jna:jna-platform:5.11.0")
     testImplementation(kotlin("test"))
 }
 
