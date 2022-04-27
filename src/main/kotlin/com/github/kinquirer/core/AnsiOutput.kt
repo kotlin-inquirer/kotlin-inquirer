@@ -1,9 +1,10 @@
 package com.github.kinquirer.core
 
+import com.sun.jna.platform.win32.Kernel32
 import org.fusesource.jansi.Ansi
 import org.fusesource.jansi.Ansi.ansi
 import org.fusesource.jansi.AnsiConsole
-import kotlin.text.Charsets.UTF_8
+import java.nio.charset.Charset
 
 
 internal object AnsiOutput {
@@ -28,7 +29,14 @@ internal object AnsiOutput {
         }
 
         with(AnsiConsole.out()) {
-            write(rendered.toByteArray(UTF_8))
+            val consoleCP = if (isOldTerminal) Kernel32.INSTANCE.GetConsoleCP() else 0
+            write(
+                rendered.toByteArray(
+                    // Cp65001 is equivalent to UTF-8
+                    if (isOldTerminal && consoleCP != 65001) Charset.forName("Cp$consoleCP")
+                    else Charsets.UTF_8
+                )
+            )
             flush()
         }
     }
