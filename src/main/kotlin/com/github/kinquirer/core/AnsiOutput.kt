@@ -29,7 +29,7 @@ internal object AnsiOutput {
         }
 
         with(AnsiConsole.out()) {
-            val consoleCP = Kernel32.INSTANCE.GetConsoleCP()
+            val consoleCP = if (isOldTerminal) Kernel32.INSTANCE.GetConsoleCP() else 0
             write(
                 rendered.toByteArray(
                     // Cp65001 is equivalent to UTF-8
